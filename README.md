@@ -1,7 +1,7 @@
 :sparkling_heart: Maña Ind.
 ==============================
 
-### Clean Wordpress theme for mind
+### Custom Wordpress theme
 
 ![Screenshot](./screenshot.png)
 
