@@ -3,7 +3,8 @@
     flex-basis: 100%;
     text-align: center;
     line-height: 3;
-    color: darken($color-base, 25);
+    color: $color-white;
+    background-color: $color-alt;
     @media screen and (max-width: $bp3) {}
     @media screen and (min-width: $bp3) {}
     img[src$=".svg"] {
@@ -11,6 +12,9 @@
     }
     input[type="submit"] {}
     order: 3;
+    a {
+      color: $color-white;
+    }
 }
 
 .main-footer__header {}

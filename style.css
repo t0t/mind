@@ -321,13 +321,13 @@ h6.altheader {
 * Escondemos el texto solo VISUALMENTE
 */
 body {
-  font-family: "Molengo", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 12px;
   font-size: 0.75rem;
   font-weight: 400;
   color: black;
   letter-spacing: 1px;
-  background-color: #ebe8e5; }
+  background-color: #fbf7e9; }
   @media screen and (min-width: 450px) {
     body {
       font-size: 18px;
@@ -359,7 +359,7 @@ img[src$=".svg"] {
   line-height: 1.5; }
 
 mark {
-  background: #fbfaf9; }
+  background: white; }
 
 /*------------------------------------*    $TIPOGRAFiA
 \*------------------------------------*/
@@ -369,7 +369,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Molengo", sans-serif;
+  font-family: "Roboto Slab", serif;
   letter-spacing: 0px;
   text-rendering: optimizelegibility;
   font-weight: normal; }
@@ -377,7 +377,7 @@ h6 {
 h1 small,
 h2 small,
 h3 small {
-  color: #ffba68;
+  color: #1c3f94;
   font-size: 32px;
   font-size: 2rem;
   font-style: italic;
@@ -466,7 +466,7 @@ ul {
 
 blockquote {
   padding-left: 12.5px;
-  border-left: 5px solid #ffba68;
+  border-left: 5px solid #1c3f94;
   color: black;
   margin-left: 0;
   margin-bottom: 0; }
@@ -500,7 +500,7 @@ ins {
   text-decoration: none; }
 
 mark {
-  background-color: #e0dbd7;
+  background-color: #f7eed4;
   color: black; }
 
 pre,
@@ -576,7 +576,7 @@ hr {
     transition: all 0.4s; }
     .btn a:hover {
       text-decoration: none;
-      background-color: #ffba68; }
+      background-color: #1c3f94; }
     .btn a:active,
     .btn a:focus {
       outline: none; }
@@ -591,13 +591,13 @@ hr {
     position: inherit; }
 
 .btn-checkout {
-  background-color: #ffba68; }
+  background-color: #1c3f94; }
 
 .btn--inline-text {
   display: inline;
   padding: 0; }
   .btn--inline-text:hover:before {
-    color: #d7dce0; }
+    color: #d4ddf7; }
 
 .btn--standard {
   background-color: transparent;
@@ -619,7 +619,7 @@ hr {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #e0dbd7; }
+  border-color: #f7eed4; }
 
 /**
 * Boton no disponible
@@ -632,7 +632,7 @@ input[type="submit"].btn:hover {
 * Botones
 */
 .btn--alert:hover {
-  background-color: #e0dbd7; }
+  background-color: #f7eed4; }
 
 .btn--well:focus {
   outline: none; }
@@ -643,7 +643,7 @@ input[type="submit"].btn:hover {
   border: none; }
   .btn--info:hover {
     background-color: black;
-    color: #ffba68; }
+    color: #1c3f94; }
 
 .btn--submit {
   background-color: #abd1b2;
@@ -654,16 +654,16 @@ input[type="submit"].btn:hover {
   padding: 16.66667px; }
   .btn--submit:hover {
     background-color: black;
-    color: #ffba68; }
+    color: #1c3f94; }
 
 .btn--input {
   background-color: transparent;
-  border: 2px solid #e0dbd7;
+  border: 2px solid #f7eed4;
   font-size: 13px;
   font-size: 0.8125rem; }
   .btn--input:hover {
     color: #abd1b2;
-    border-color: #ffba68;
+    border-color: #1c3f94;
     background-color: transparent; }
 
 /**
@@ -703,9 +703,9 @@ input[type="submit"].btn:hover {
   line-height: 4; }
 
 .btn--image {
-  background-color: #ffba68; }
+  background-color: #1c3f94; }
   .btn--image:hover {
-    background-color: #ffc177; }
+    background-color: #1e44a1; }
   .btn--image a:hover {
     background-color: transparent; }
 
@@ -713,7 +713,7 @@ input[type="submit"].btn:hover {
   flex: 1 50%; }
 
 .input-text {
-  background-color: #f6f5f4; }
+  background-color: white; }
 
 label {
   margin-right: 10px; }
@@ -836,8 +836,11 @@ table {
   flex: 1 200px;
   justify-content: space-around;
   align-content: flex-start;
-  background-color: #ffba68;
-  padding: 8.33333px; }
+  background-color: #1c3f94;
+  padding: 8.33333px;
+  color: white; }
+  .site-header a {
+    color: white; }
   @media screen and (min-width: 1344px) {
     .site-header {
       justify-content: space-around;
@@ -849,8 +852,11 @@ table {
   flex-basis: 100%;
   text-align: center;
   line-height: 3;
-  color: #a89a8f;
+  color: white;
+  background-color: #1c3f94;
   order: 3; }
+  .main-footer a {
+    color: white; }
 
 .main-footer__credits {
   font-size: 13px;
@@ -932,14 +938,13 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #e0dbd7; }
+  background-color: #f7eed4; }
 
 .site-main {
   flex: 1 85%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  background-color: #f6f5f4;
   padding: 25px; }
   @media screen and (min-width: 600px) {
     .site-main {
@@ -979,7 +984,7 @@ body {
 
 .sidebar-vertical {
   width: 20%;
-  background-color: #ffba68; }
+  background-color: #1c3f94; }
 
 .sidebar-horizontal {
   width: 100%;
@@ -1037,7 +1042,6 @@ body {
   flex-wrap: wrap;
   flex: 1 400px;
   width: 100%;
-  background-color: white;
   padding-top: 25px; }
 
 .entry__header {
@@ -1102,7 +1106,7 @@ body {
   font-size: 0.8125rem; }
 
 .main-post__content__entry a {
-  border-bottom: 2px dotted #ffba68;
+  border-bottom: 2px dotted #1c3f94;
   padding-bottom: 3px; }
 
 .post--sidebar__meta-date {
@@ -1295,7 +1299,7 @@ body {
       opacity: 0;
       display: none;
       color: black;
-      background-color: #e0dbd7; } }
+      background-color: #f7eed4; } }
 
 .galeria {
   display: flex;
@@ -1317,119 +1321,14 @@ body {
     font-size: 14px;
     font-size: 0.875rem; }
 
-.woocommerce {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-.product-remove {
-  padding-left: 0; }
-
-.checkout {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap; }
-
-.cart-actionform,
-.cart-collaterals {
-  flex-grow: 1;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-  @media screen and (min-width: 700px) {
-    .cart-actionform,
-    .cart-collaterals {
-      padding: 50px; } }
-  @media screen and (min-width: 1100px) {
-    .cart-actionform,
-    .cart-collaterals {
-      flex: 0 1 49%; } }
-
-.attachment-shop_thumbnail {
-  min-width: 20px; }
-  @media screen and (min-width: 700px) {
-    .attachment-shop_thumbnail {
-      min-width: 75px;
-      padding: 4px;
-      background-color: #ffba68; } }
-
-.product-total {
-  width: 50%; }
-
-.woocommerce-checkout {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 50px;
-  background-color: white; }
-  .woocommerce-checkout h3 {
-    margin-top: 0;
-    margin-bottom: 25px; }
-  .woocommerce-checkout p {
-    margin-left: 0;
-    margin-right: 0; }
-
-.woocommerce-checkout-review-order,
-.customer_details {
-  flex-grow: 1; }
-  @media screen and (min-width: 1100px) {
-    .woocommerce-checkout-review-order,
-    .customer_details {
-      flex: 0 1 49%; } }
-
-.cart {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.product_meta {
-  margin-top: 25px; }
-
-.woocommerce-result-count {
-  color: #e0dbd7; }
-
-.reset_variations {
-  color: #abd1b2;
-  text-transform: uppercase; }
-
-.woocommerce-breadcrumb {
-  flex-basis: 100%;
-  padding-bottom: 25px; }
-
-*[data-attribute_name] {
-  margin-left: 25px;
-  margin-right: 25px; }
-
-.onsale {
-  position: absolute;
-  background-color: white;
-  margin-top: 12.5px;
-  margin-left: 12.5px;
-  padding: 12.5px;
-  border-radius: 25px; }
-
-.price {
-  text-align: center;
-  width: 100%;
-  display: block;
-  color: #abd1b2;
-  max-width: 140px; }
-
-.remove-item {
-  font-size: 40px;
-  font-size: 2.5rem;
-  display: block; }
-
 /*********************
 Main navbar
 **********************/
 .hammenu {
-  background-color: #ffae4f;
+  background-color: #18367f;
   border: none; }
-  @media screen and (min-width: 600px) {
-    .hammenu {
-      display: none; } }
   .hammenu.active {
-    background-color: #ffa335; }
+    background-color: #142d69; }
 
 @media screen and (max-width: 599px) {
   input + .site-nav__main {
@@ -1465,7 +1364,7 @@ input.active + .site-nav__main {
     flex: 0 1 150px;
     text-align: center; }
     .site-nav__main li:hover {
-      background-color: #ffae4f; }
+      background-color: #18367f; }
     @media screen and (min-width: 1024px) {
       .site-nav__main li {
         margin: 12.5px 0; } }
@@ -1489,7 +1388,7 @@ input.active + .site-nav__main {
   min-width: 90%;
   display: block; }
   .site-nav__item a:hover {
-    background-color: #ffc682;
+    background-color: #2048a9;
     color: black; }
 
 .nav-secondary ul {
@@ -1501,16 +1400,16 @@ input.active + .site-nav__main {
 .nav-secondary li {
   width: 33.33%;
   display: table-cell;
-  color: #ffba68; }
+  color: #1c3f94; }
   @media all and (min-width: 1280px) {
     .nav-secondary li {
       font-size: 25px;
       font-size: 1.5625rem; } }
 
 .nav-secondary a {
-  color: #e0dbd7; }
+  color: #f7eed4; }
   .nav-secondary a:hover {
-    color: #ffba68; }
+    color: #1c3f94; }
 
 .nav-footer {
   display: table; }

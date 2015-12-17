@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <?php if(have_posts()): ?>
   <main class="site-main" role="main">
-  <?php if (is_category( 'blog' )): ?>
-    <h1 class="site-main__title">Blog</h1>
+  <?php if (is_category( 'proyectos' )): ?>
+    <h1 class="site-main__title">Proyectos</h1>
     <p>
-      <?php echo category_description( get_category_by_slug('blog')->term_id ); ?>
+      <?php echo category_description( get_category_by_slug('proyectos')->term_id ); ?>
     </p>
   <?php endif; ?>
     <section class="posts-wrap">
@@ -27,6 +27,7 @@
           </div>
         </div>
       <?php endwhile; ?>
+
   		<div class="navigation">
   			<div class="nav-prev">
   				<?php next_posts_link('&laquo; Older Entries') ?>
@@ -37,6 +38,7 @@
   		</div>
     </section>
   </main>
+
 <?php else: ?>
   <main class="site-main" role="main">
     <h2>There were no results that matched your request</h2>
@@ -44,5 +46,6 @@
     <?php get_search_form(); ?>
    </main>
 <?php endif; ?>
-<?php get_sidebar(); ?>
+
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

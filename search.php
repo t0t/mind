@@ -28,6 +28,6 @@
 		<?php endif; ?>
 	</main> <!-- end main-content -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

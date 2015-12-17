@@ -8,6 +8,10 @@ header {}
   align-content: flex-start;
   background-color: $color-alt;
   padding: $padding_base / 6;
+  color: $color-white;
+  a {
+    color: $color-white;
+  }
 
   @media screen and (min-width: 1344px) {
     justify-content: space-around;

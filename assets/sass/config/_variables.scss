@@ -15,11 +15,11 @@ $color-white: rgb(255, 255, 255);
 $color-black: rgb(0, 0, 0);
 $color-black-alpha: transparentize($color-black, 0.5);
 
-$color-base: rgb(224, 219, 215);
+$color-base: rgb(247,238,212);
 // $color-base: rgb(224, 219, 215);
 // $color-base: rgb(217, 206, 190);
 $color-base-alpha: transparentize($color-base, 0.5);
-$color-alt: rgb(255, 186, 104);
+$color-alt: rgb(28,63,148);
 $color-alt2: rgb(171, 209, 178);
 // $color-alt2: rgb(104, 186, 104);
 $color-alt3: lighten($color-base, 5);
@@ -50,9 +50,9 @@ $radius: 10px;
 $image-path: "assets/img/";
 
 // $fuentes
-$googlefont: "http://fonts.googleapis.com/css?family=Molengo";
+$googlefont: "http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700";
 $codefont: "Courier New", monospace;
-$basefont: "Molengo", sans-serif;
+$basefont: "Roboto Slab", serif;
 $altfont: $basefont;
 $baseheadingfont: $basefont;
 $baseheadingfontweight: 400;

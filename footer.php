@@ -5,8 +5,17 @@
  * The template for displaying the footer.
  */
 ?>
-<?php get_sidebar( 'footer' ); ?>
+<?php //get_sidebar( 'footer' ); ?>
 	<footer class="main-footer">
+    <nav class="site-nav" role="navigation">
+      <?php
+        wp_nav_menu( array(
+          'theme_location'  => 'footer-menu',
+          'container'       => '',
+          'menu_class'      => 'site-nav__main'
+        ));
+      ?>
+    </nav>
 		<p>
 			&copy; <?php echo date( 'Y' ); ?>
 			<a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
