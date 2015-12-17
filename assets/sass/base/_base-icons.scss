@@ -1,6 +1,46 @@
 .icon {
   width: 30px;
   height: 30px;
-  &-facebook {}
-  &-envelope {}
+  fill: $color-alt;
+  &--facebook { }
+  &--logo {
+    width: 150px;
+    height: 75px;
+  }
+  &--logo2 {
+    width: 150px;
+    height: 75px;
+  }
+  &--logo3 {
+    width: 150px;
+    height: 75px;
+  }
+  &--logo4 {
+    width: 150px;
+    height: auto;
+  }
+  &--logo5 {
+    width: auto;
+    height: 200px;
+  }
+  &--logo6 {
+    width: 150px;
+    height: auto;
+  }
+  &--arrow-left {
+    width: 150px;
+    height: 75px;
+    stroke: $color-alt;
+  }
+  &--arrow-right {
+    width: 150px;
+    height: 75px;
+    stroke: $color-alt;
+  }
+}
+.icon-subtitle {
+  font-weight: light;
+  font-size: .65em;
+  color: $color-alt;
+  text-transform: uppercase;
 }

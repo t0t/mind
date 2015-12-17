@@ -762,7 +762,40 @@ textarea {
 
 .icon {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  fill: #1c3f94; }
+  .icon--logo {
+    width: 150px;
+    height: 75px; }
+  .icon--logo2 {
+    width: 150px;
+    height: 75px; }
+  .icon--logo3 {
+    width: 150px;
+    height: 75px; }
+  .icon--logo4 {
+    width: 150px;
+    height: auto; }
+  .icon--logo5 {
+    width: auto;
+    height: 200px; }
+  .icon--logo6 {
+    width: 150px;
+    height: auto; }
+  .icon--arrow-left {
+    width: 150px;
+    height: 75px;
+    stroke: #1c3f94; }
+  .icon--arrow-right {
+    width: 150px;
+    height: 75px;
+    stroke: #1c3f94; }
+
+.icon-subtitle {
+  font-weight: light;
+  font-size: .65em;
+  color: #1c3f94;
+  text-transform: uppercase; }
 
 .alert {
   display: flex;
@@ -836,11 +869,10 @@ table {
   flex: 1 200px;
   justify-content: space-around;
   align-content: flex-start;
-  background-color: #1c3f94;
   padding: 8.33333px;
   color: white; }
   .site-header a {
-    color: white; }
+    color: #f7eed4; }
   @media screen and (min-width: 1344px) {
     .site-header {
       justify-content: space-around;
@@ -852,11 +884,11 @@ table {
   flex-basis: 100%;
   text-align: center;
   line-height: 3;
-  color: white;
+  color: #f7eed4;
   background-color: #1c3f94;
   order: 3; }
   .main-footer a {
-    color: white; }
+    color: #f7eed4; }
 
 .main-footer__credits {
   font-size: 13px;
@@ -1359,7 +1391,8 @@ input.active + .site-nav__main {
 .site-nav__main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #1c3f94; }
   .site-nav__main li {
     flex: 0 1 150px;
     text-align: center; }

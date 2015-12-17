@@ -19,13 +19,18 @@ get_header(); ?>
       ?>
     </nav>
 
+    <?php
+      /* SLIDER */
+      get_template_part('partials/slider');
+    ?>
+
     <?php get_template_part( 'content', get_post_format() ); ?>
 
   <?php endwhile; ?>
   <?php else : ?>
     <?php get_template_part( 'content', 'none' ); ?>
   <?php endif; ?>
-  
+
 </main>
 
 <?php get_footer(); ?>

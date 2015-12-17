@@ -4,7 +4,7 @@
   <?php if (is_category( 'proyectos' )): ?>
     <h1 class="site-main__title">Proyectos</h1>
     <p>
-      <?php echo category_description( get_category_by_slug('proyectos')->term_id ); ?>
+      <?php echo category_description( get_category_by_slug( 'proyectos' )->term_id ); ?>
     </p>
   <?php endif; ?>
     <section class="posts-wrap">

@@ -6,11 +6,11 @@ header {}
   flex: 1 200px;
   justify-content: space-around;
   align-content: flex-start;
-  background-color: $color-alt;
+  // background-color: $color-alt;
   padding: $padding_base / 6;
   color: $color-white;
   a {
-    color: $color-white;
+    color: $color-base;
   }
 
   @media screen and (min-width: 1344px) {

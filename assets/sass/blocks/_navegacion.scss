@@ -48,6 +48,7 @@ input.active + .site-nav__main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: $color-alt;
   li {
     flex: 0 1 150px;
     text-align: center;
