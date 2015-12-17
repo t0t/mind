@@ -1,4 +1,4 @@
-:sparkling_heart: Mind
+:sparkling_heart: Maña Ind.
 ==============================
 
 ### Clean Wordpress theme for mind
