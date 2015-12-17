@@ -2,6 +2,9 @@
   width: 30px;
   height: 30px;
   fill: $color-alt;
+  &--close {
+    fill: $color-base;
+  }
   &--facebook { }
   &--logo {
     width: 150px;
@@ -10,10 +13,12 @@
   &--logo2 {
     width: 150px;
     height: 75px;
+    fill: $color-base;
   }
   &--logo3 {
     width: 150px;
     height: 75px;
+    fill: $color-base;
   }
   &--logo4 {
     width: 150px;

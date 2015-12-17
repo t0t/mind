@@ -4,7 +4,13 @@
  * Template name: Contacto
  */
 get_header(); ?>
+
 <main class="site-main" role="main">
+
+  <svg class="icon icon--logo5">
+    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo5"></use>
+  </svg>
+
   <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', get_post_format() ); ?>
     <?php echo do_shortcode( '[contact-form-7 id="4" title="Formulario de contacto 1"]' ); ?>
@@ -13,4 +19,5 @@ get_header(); ?>
     <?php get_template_part( 'content', 'none' ); ?>
   <?php endif; ?>
 </main>
+
 <?php get_footer(); ?>

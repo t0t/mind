@@ -77,26 +77,7 @@ elBtn.addEventListener('click', accion);
     }
   }
 
-
-
-
   console.log( pathName );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
