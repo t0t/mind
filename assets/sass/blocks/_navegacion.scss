@@ -9,6 +9,11 @@ input ~ label .icon--close {
 }
 input:checked ~ label:hover { cursor: pointer; }
 
+// wrap toggle button
+.toggle {
+  flex: 0 33%;
+}
+
 // Site ofset Nav
 input[name="on"] ~ .site-offset {
   animation-name: slideup;

@@ -6,11 +6,13 @@ header {}
   flex: 1 100%;
   justify-content: space-between;
   align-content: center;
-  // background-color: $color-alt;
-  padding: $padding_base / 6;
+  padding: $padding_base / 2;
   color: $color-white;
   a {
     color: $color-base;
+  }
+  label {
+    margin-right: 0;  
   }
   @media screen and (min-width: 1344px) {
     justify-content: space-around;

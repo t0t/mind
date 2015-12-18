@@ -17,11 +17,11 @@
 
   <header class="site-header" role="banner">
 
-    <input type="radio" id="Id" name="off" class="hammenu">
-    <label for="Id">
-      <svg class="icon icon--toggle"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#toggle"></svg>
-      <svg class="icon icon--close"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#close"></svg>
-    </label>
+      <input type="radio" id="Id" name="off" class="hammenu">
+      <label for="Id" class="toggle">
+        <svg class="icon icon--toggle"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#toggle"></svg>
+        <svg class="icon icon--close"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#close"></svg>
+      </label>
 
     <div class="brand">
 			<a class="brand__logo" href="<?php echo site_url();?>" rel="home">
@@ -29,29 +29,23 @@
 	        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo">
   		  </svg>
 			</a>
-			<h1 class="brand__name"><?php //bloginfo('name');?></h1>
-			<h2 class="brand__description"><?php //bloginfo('description');?></h2>
+			<!-- <h1 class="brand__name"><?php //bloginfo('name');?></h1> -->
+			<!-- <h2 class="brand__description"><?php //bloginfo('description');?></h2> -->
     </div>
 
-    <form role="search" method="get" class="search-form form-inline" action="<?php echo esc_url(home_url('/')); ?>">
-      <label class="sr-only"><?php //_e('Search for:', 'roots'); ?></label>
-      <div class="input-group">
-        <svg class="icon icon--lupa">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa">
-        </svg>
-        <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search in', 'roots'); ?> <?php bloginfo('name'); ?>">
-        <span class="input-group-btn">
-          <button type="submit" class="search-submit btn btn-default">
-            <i class="icon-arrow-right"></i>
-          </button>
-        </span>
-      </div>
-    </form>
-
+    <form class="search-form" method="get" action="localhost:3000/">
+			<fieldset>
+				<input type="text" name="s" maxlength="128" autocomplete="off" value="">
+				<button type="submit" class="btn--search">
+          <svg class="icon icon--lupa">
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa">
+          </svg>
+        </button>
+			</fieldset>
+		</form>
 
     <div class="site-offset">
       <nav class="site-offset__nav" role="navigation">
-
         <?php
           wp_nav_menu( array(
             'theme_location'  => 'main-menu',

@@ -1,3 +1,21 @@
+.search-form {
+  flex: 0 31%;
+  text-align: right;
+  fieldset {
+    border-bottom: 1px solid $color-base;
+    &:hover {
+      border-bottom: 1px solid $color-alt;
+    }
+  }
+  input {
+    background-color: transparent;
+    border-radius: 0;
+    width: 70%;
+    color: $color-alt;
+  }
+}
+
+
 .input-client {
 	flex: 1 50%;
 }

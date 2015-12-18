@@ -7,7 +7,10 @@
     fill: $color-base;
     position: fixed;
   }
-  &--toggle {  }
+  &--toggle {
+    margin-right: 0;
+    // width: 100%;
+  }
   &--facebook { }
   &--logo {
     width: 150px;

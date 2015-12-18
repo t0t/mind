@@ -254,9 +254,9 @@ input[type="search"]::-webkit-search-decoration {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: none;
+  margin: 0;
+  padding: 0; }
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -587,6 +587,10 @@ img {
     .btn a:focus {
       outline: none; }
 
+.btn--search {
+  border: none;
+  background-color: transparent; }
+
 .btn-singlecart {
   border: none;
   position: absolute;
@@ -715,6 +719,19 @@ input[type="submit"].btn:hover {
   .btn--image a:hover {
     background-color: transparent; }
 
+.search-form {
+  flex: 0 31%;
+  text-align: right; }
+  .search-form fieldset {
+    border-bottom: 1px solid #f7eed4; }
+    .search-form fieldset:hover {
+      border-bottom: 1px solid #1c3f94; }
+  .search-form input {
+    background-color: transparent;
+    border-radius: 0;
+    width: 70%;
+    color: #1c3f94; }
+
 .input-client {
   flex: 1 50%; }
 
@@ -774,6 +791,8 @@ textarea {
     z-index: 1000;
     fill: #f7eed4;
     position: fixed; }
+  .icon--toggle {
+    margin-right: 0; }
   .icon--logo {
     width: 150px;
     height: 75px; }
@@ -881,10 +900,12 @@ table {
   flex: 1 100%;
   justify-content: space-between;
   align-content: center;
-  padding: 8.33333px;
+  padding: 25px;
   color: white; }
   .site-header a {
     color: #f7eed4; }
+  .site-header label {
+    margin-right: 0; }
   @media screen and (min-width: 1344px) {
     .site-header {
       justify-content: space-around;
@@ -1165,16 +1186,12 @@ body {
   margin-bottom: 0; }
 
 .brand {
-  flex: 0 1 150px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
+  flex: 2 33%;
+  text-align: center; }
 
-.brand__logo svg {
-  width: 30%; }
-  @media screen and (min-width: 600px) {
-    .brand__logo svg {
-      width: 100%; } }
+@media screen and (min-width: 600px) {
+  .brand__logo svg {
+    width: 100%; } }
 
 .brand__logo path.hoja3 {
   animation-name: rotate;
@@ -1492,6 +1509,9 @@ input ~ label .icon--close {
 
 input:checked ~ label:hover {
   cursor: pointer; }
+
+.toggle {
+  flex: 0 33%; }
 
 input[name="on"] ~ .site-offset {
   animation-name: slideup;

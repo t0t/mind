@@ -1,10 +1,6 @@
 .brand {
-    flex: 0 1 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    // align-items: center;
-    // flex: 0 200px;
+    flex: 2 33%;
+    text-align: center;
 
     @media screen and (min-width: 1177px) {
         // margin-top: $padding_base;
@@ -19,7 +15,7 @@
     // @include transition(4s);
     // background-color: $color-white;
     svg {
-      width: 30%;
+      // width: 30%;
       // background-color: blue;
       @media screen and (min-width: 600px) {
         width: 100%;
@@ -96,7 +92,7 @@
             background-color: black;
             // @include transition(2s);
             // @include translateY(200px);
-       
+
         }
 
         .brand {
@@ -104,7 +100,7 @@
 
             path {
                 // fill: $color-alt;
-           
+
             }
         }
     }
