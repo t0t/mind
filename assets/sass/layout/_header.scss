@@ -1,23 +1,20 @@
 header {}
 
 .site-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex: 1 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
-  padding: $padding_base / 2;
+  padding-top: $padding_base / 2;
+  padding-bottom: $padding_base / 2;
   color: $color-white;
   a {
     color: $color-base;
   }
   label {
-    margin-right: 0;  
+    margin-right: 0;
   }
-  @media screen and (min-width: 1344px) {
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: inherit;
-    flex: 0 219px;
-  }
+  @media screen and (min-width: 1344px) {}
 }

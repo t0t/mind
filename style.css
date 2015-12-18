@@ -721,7 +721,11 @@ input[type="submit"].btn:hover {
 
 .search-form {
   flex: 0 31%;
-  text-align: right; }
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  z-index: 5; }
   .search-form fieldset {
     border-bottom: 1px solid #f7eed4; }
     .search-form fieldset:hover {
@@ -900,23 +904,19 @@ table {
     border-top: 0; }
 
 .site-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex: 1 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   color: white; }
   .site-header a {
     color: #f7eed4; }
   .site-header label {
     margin-right: 0; }
-  @media screen and (min-width: 1344px) {
-    .site-header {
-      justify-content: space-around;
-      align-content: flex-start;
-      align-items: inherit;
-      flex: 0 219px; } }
 
 .main-footer {
   flex-basis: 100%;
@@ -1519,7 +1519,10 @@ input:checked ~ label:hover {
   cursor: pointer; }
 
 .toggle {
-  flex: 0 33%; }
+  flex: 0 33%;
+  position: absolute;
+  top: 50px;
+  left: 50px; }
 
 input[name="off"] ~ .site-offset {
   display: none;

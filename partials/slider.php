@@ -10,7 +10,7 @@
   <?php
     $args = array(
       'post_type' => 'post',
-      'post_per_page' => 4,
+      'post_per_page' => 5,
     );
     $the_query = new WP_Query( $args );
   ?>

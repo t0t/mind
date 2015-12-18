@@ -12,6 +12,9 @@ input:checked ~ label:hover { cursor: pointer; }
 // wrap toggle button
 .toggle {
   flex: 0 33%;
+  position: absolute;
+  top: $padding_base;
+  left: $padding_base;
 }
 
 // Site ofset Nav

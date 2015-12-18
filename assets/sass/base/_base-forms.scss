@@ -1,6 +1,10 @@
 .search-form {
   flex: 0 31%;
   text-align: right;
+  position: absolute;
+  top: $padding_base;
+  right: $padding_base / 2;
+  z-index: 5;
   fieldset {
     border-bottom: 1px solid $color-base;
     &:hover {
