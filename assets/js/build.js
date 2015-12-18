@@ -43,15 +43,16 @@ jQuery(document).ready(function($) {
 var elBtn = document.getElementById('Id');
 // La Accion
 var accion = function () {
-  if ( elBtn.name == 'on' ) {
+  if ( elBtn.name == 'off' ) {
     elBtn.checked = true;
-    elBtn.name = 'off';
+    elBtn.name = 'on';
     elBtn.className = 'hammenu';
+    console.log(elBtn.checked);
   } else {
     elBtn.checked = false;
-    elBtn.name = 'on';
+    elBtn.name = 'off';
     elBtn.className = 'hammenu active';
-    // console.log(elBtn.checked);
+    console.log(elBtn.checked);
   }
 };
 // Asigno acción al elemento

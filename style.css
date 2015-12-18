@@ -764,8 +764,6 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
-  .icon--close {
-    display: none; }
   .icon--logo {
     width: 150px;
     height: 75px; }
@@ -1366,6 +1364,9 @@ body {
   Main navbar
 **********************/
 input.hammenu {
+  display: none; }
+
+input ~ label .icon--close {
   display: none; }
 
 input:checked ~ label .icon--close {

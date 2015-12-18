@@ -3,18 +3,18 @@
 **********************/
 input.hammenu { display: none; }
 
+input ~ label .icon--close { display: none; }
 input:checked ~ label .icon--close { display: block; }
 input:checked ~ label .icon--toggle { display: none; }
 input:checked ~ label:hover { cursor: pointer; }
 
+// Site ofset Nav
 input[name="on"] ~ .site-offset {
   animation-name: slideup;
   animation-delay: 0s;animation-duration: .5s;animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
 input[name="off"] ~ .site-offset { display: none; }
-
-// Site ofset Nav
 .site-offset {
   position: fixed;
   top: 0;
