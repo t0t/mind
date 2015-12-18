@@ -2,7 +2,11 @@
   width: 30px;
   height: 30px;
   fill: $color-alt;
-  &--close { }
+  &--close {
+    z-index: 1000;
+    fill: $color-base;
+    position: fixed;
+  }
   &--toggle {  }
   &--facebook { }
   &--logo {

@@ -770,6 +770,10 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
+  .icon--close {
+    z-index: 1000;
+    fill: #f7eed4;
+    position: fixed; }
   .icon--logo {
     width: 150px;
     height: 75px; }
