@@ -15,23 +15,32 @@ input[name="on"] ~ .site-offset {
   animation-delay: 0s;animation-duration: .5s;animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
-input[name="off"] ~ .site-offset { display: none; }
+
+input[name="off"] ~ .site-offset {
+  display: none;
+}
+
 .site-offset {
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
-  left: 250px;
-  z-index: 50;
+  left: 0;
+  z-index: 10;
   background-color: $color-alt;
-  flex-basis: 100%;
   p {
     color: $color-white;
   }
   &__nav {
-    flex-basis: 100%;
-    align-self: center;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-content: center;
     a {
       display: block;
       padding: 10px 15px;
+      @include font-size(35);
     }
   }
   &__footer {
@@ -48,6 +57,7 @@ input[name="off"] ~ .site-offset { display: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
   // flex-wrap: wrap;
   // justify-content: flex-start;
   li {
