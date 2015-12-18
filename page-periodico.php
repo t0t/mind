@@ -6,18 +6,15 @@
 get_header(); ?>
 
 <main class="site-main" role="main">
-  
-  <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+    <?php
+      wp_nav_menu( array(
+        'theme_location'  => 'extra-menu',
+        'container'       => '',
+        'menu_class'      => 'site-nav__extra'
+      ));
+    ?>
 
-    <nav class="site-nav" role="navigation">
-      <?php
-        wp_nav_menu( array(
-          'theme_location'  => 'extra-menu',
-          'container'       => '',
-          'menu_class'      => 'site-nav__main'
-        ));
-      ?>
-    </nav>
+  <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
     <?php
       /* SLIDER */

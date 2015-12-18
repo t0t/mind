@@ -1646,6 +1646,16 @@ input[name="off"] ~ .site-offset {
       .site-nav__main li {
         margin: 12.5px 0; } }
 
+.site-nav__extra {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .site-nav__extra a {
+    padding: 5px 25px; }
+    .site-nav__extra a:hover {
+      text-decoration: underline; }
+
 .site-nav__footer {
   display: flex;
   flex-wrap: wrap;

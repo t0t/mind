@@ -1,10 +1,9 @@
-
-<article id="slider">
-<input checked type='radio' name='slider' id='slide1'/>
-<input type='radio' name='slider' id='slide2'/>
-<input type='radio' name='slider' id='slide3'/>
-<input type='radio' name='slider' id='slide4'/>
-<input type='radio' name='slider' id='slide5'/>
+<aside id="slider">
+  <input checked type='radio' name='slider' id='slide1'/>
+  <input type='radio' name='slider' id='slide2'/>
+  <input type='radio' name='slider' id='slide3'/>
+  <input type='radio' name='slider' id='slide4'/>
+  <input type='radio' name='slider' id='slide5'/>
 <div id="slides">
 	<div id="container">
 		<div class="inner">
@@ -52,4 +51,4 @@
 	<label for='slide4'></label>
 	<label for='slide5'></label>
 </div>
-</article>
+</aside>
