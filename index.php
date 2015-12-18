@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if(have_posts()): ?>
+<?php if( have_posts() ): ?>
   <main class="site-main" role="main">
   <?php if (is_category( 'proyectos' )): ?>
     <h1 class="site-main__title">Proyectos</h1>

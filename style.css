@@ -556,6 +556,12 @@ hr {
   height: 1px;
   border: 0; }
 
+label,
+#active,
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+
 .btn {
   padding: 10px 15px;
   border-radius: 5px;
@@ -1396,7 +1402,7 @@ body {
 #slide4:checked ~ .slider__nav label:nth-child(5),
 #slide5:checked ~ .slider__nav label:nth-child(1) {
   float: right;
-  margin: 0 12px 0 0;
+  margin-right: 0;
   display: block; }
 
 #slide1:checked ~ .slider__nav label:nth-child(5),
@@ -1405,8 +1411,8 @@ body {
 #slide4:checked ~ .slider__nav label:nth-child(3),
 #slide5:checked ~ .slider__nav label:nth-child(4) {
   float: left;
-  margin: 0 0 0 -6px;
-  display: block; }
+  margin-left: 0;
+  display: none; }
 
 .slider__dots {
   position: relative;

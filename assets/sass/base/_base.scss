@@ -301,3 +301,11 @@ hr {
   height: 1px;
   border: 0;
 }
+
+// Evita seleccion de doble click, importante
+label,
+#active,
+img {
+  -moz-user-select:none;
+  -webkit-user-select:none
+}
