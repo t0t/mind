@@ -2,10 +2,11 @@
   Main navbar
 **********************/
 input.hammenu { display: none; }
-
-input ~ label .icon--close { display: none; }
 input:checked ~ label .icon--close { display: block; }
-input:checked ~ label .icon--toggle { display: none; }
+input:checked ~ label .icon--toggle,
+input ~ label .icon--close {
+  display: none;
+}
 input:checked ~ label:hover { cursor: pointer; }
 
 // Site ofset Nav
