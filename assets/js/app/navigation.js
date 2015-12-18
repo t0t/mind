@@ -5,16 +5,22 @@ jQuery(document).ready(function($) {
 var elBtn = document.getElementById('Id');
 // La Accion
 var accion = function () {
-  if ( elBtn.value == 'Cerrar Menu' ) {
-    elBtn.value = 'Menu';
+  if ( elBtn.name == 'on' ) {
+    elBtn.checked = true;
+    elBtn.name = 'off';
     elBtn.className = 'hammenu';
   } else {
-    elBtn.value = 'Cerrar Menu';
+    elBtn.checked = false;
+    elBtn.name = 'on';
     elBtn.className = 'hammenu active';
+    // console.log(elBtn.checked);
   }
 };
 // Asigno acción al elemento
 elBtn.addEventListener('click', accion);
+
+
+
 
 // Ham Menu
 // $('.hammenu').on('click', function () {

@@ -1,47 +1,27 @@
 /*********************
-Main navbar
+  Main navbar
 **********************/
-// hammenu icon menu
-.hammenu {
-  @media screen and (min-width: 600px) {
-    // display: none;
-  }
-  background-color: darken($color-alt,5);
-  border: none;
-  &.active {
-    background-color: darken($color-alt,10);
-  }
-}
-input + .site-nav__main {
-  @media screen and (max-width: 599px) {
-    display: none;
-  }
-}
-input.active + .site-nav__main {
-  display: flex;
+input.hammenu { display: none; }
+
+input:checked ~ label .icon--close { display: block; }
+input:checked ~ label .icon--toggle { display: none; }
+input:checked ~ label:hover { cursor: pointer; }
+
+input[name="on"] ~ .site-offset {
   animation-name: slideup;
-  animation-delay: 0s;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
+  animation-delay: 0s;animation-duration: .5s;animation-iteration-count: 1;
   animation-timing-function: ease-in;
 }
-
-input + .site-nav__main {
-  @media screen and (max-width: 599px) {
-    display: none;
-  }
-}
-input.active + .site-nav__main {
-  display: flex;
-}
+input[name="off"] ~ .site-offset { display: none; }
 
 // Site ofset Nav
 .site-offset {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  z-index: 50;
   background-color: $color-alt;
   flex-basis: 100%;
-  display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
   p {
     color: $color-white;
   }

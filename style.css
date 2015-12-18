@@ -765,7 +765,7 @@ textarea {
   height: 30px;
   fill: #1c3f94; }
   .icon--close {
-    fill: #f7eed4; }
+    display: none; }
   .icon--logo {
     width: 150px;
     height: 75px; }
@@ -1363,37 +1363,37 @@ body {
     font-size: 0.875rem; }
 
 /*********************
-Main navbar
+  Main navbar
 **********************/
-.hammenu {
-  background-color: #18367f;
-  border: none; }
-  .hammenu.active {
-    background-color: #142d69; }
+input.hammenu {
+  display: none; }
 
-@media screen and (max-width: 599px) {
-  input + .site-nav__main {
-    display: none; } }
+input:checked ~ label .icon--close {
+  display: block; }
 
-input.active + .site-nav__main {
-  display: flex;
+input:checked ~ label .icon--toggle {
+  display: none; }
+
+input:checked ~ label:hover {
+  cursor: pointer; }
+
+input[name="on"] ~ .site-offset {
   animation-name: slideup;
   animation-delay: 0s;
   animation-duration: .5s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in; }
 
-@media screen and (max-width: 599px) {
-  input + .site-nav__main {
-    display: none; } }
-
-input.active + .site-nav__main {
-  display: flex; }
+input[name="off"] ~ .site-offset {
+  display: none; }
 
 .site-offset {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  z-index: 50;
   background-color: #1c3f94;
-  flex-basis: 100%;
-  display: flex; }
+  flex-basis: 100%; }
   .site-offset p {
     color: white; }
   .site-offset__nav {

@@ -16,14 +16,17 @@
 <body>
 
   <header class="site-header" role="banner">
-    <svg class="icon icon--toggle">
-      <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#toggle"></use>
-    </svg>
+
+    <input type="radio" id="Id" name="off" class="hammenu">
+    <label for="Id">
+      <svg class="icon icon--toggle"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#toggle"></svg>
+      <svg class="icon icon--close"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#close"></svg>
+    </label>
 
     <div class="brand">
 			<a class="brand__logo" href="<?php echo site_url();?>" rel="home">
         <svg class="icon icon--logo">
-	        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo"></use>
+	        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo">
   		  </svg>
 			</a>
 			<h1 class="brand__name"><?php //bloginfo('name');?></h1>
@@ -34,7 +37,7 @@
       <label class="sr-only"><?php //_e('Search for:', 'roots'); ?></label>
       <div class="input-group">
         <svg class="icon icon--lupa">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa"></use>
+          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa">
         </svg>
         <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search in', 'roots'); ?> <?php bloginfo('name'); ?>">
         <span class="input-group-btn">
@@ -49,12 +52,6 @@
     <div class="site-offset">
       <nav class="site-offset__nav" role="navigation">
 
-        <svg class="icon icon--close">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#close"></use>
-        </svg>
-
-        <input type="button" id="Id" value="Menu" class="hammenu">
-
         <?php
           wp_nav_menu( array(
             'theme_location'  => 'main-menu',
@@ -66,7 +63,7 @@
         <footer class="site-offset__footer">
           <div>
             <svg class="icon icon--logo2">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo2"></use>
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo2">
             </svg>
             <p class="icon-subtitle"> DESDE 2014 CIUDAD DE BUENOS AIRES REP. ARGENTINA </p>
           </div>
@@ -75,7 +72,7 @@
 
           <div>
             <svg class="icon icon--logo3">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo3"></use>
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo3">
             </svg>
             <p class="icon-subtitle">COMUNIDAD DE PRODUCCIÓN Y COMUNICACIÓN</p>
           </div>
