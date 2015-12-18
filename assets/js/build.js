@@ -41,18 +41,21 @@ jQuery(document).ready(function($) {
 
 // Declaro elemento
 var elBtn = document.getElementById('Id');
+var elHtml = document.getElementsByTagName('html')[0];
 // La Accion
 var accion = function () {
   if ( elBtn.name == 'off' ) {
     elBtn.checked = true;
     elBtn.name = 'on';
     elBtn.className = 'hammenu';
-    console.log(elBtn.checked);
+    elHtml.className = 'overflow';
+    // console.log(elHtml);
   } else {
     elBtn.checked = false;
     elBtn.name = 'off';
     elBtn.className = 'hammenu active';
-    console.log(elBtn.checked);
+    elHtml.className = '';
+    // console.log(elBtn.checked);
   }
 };
 // Asigno acción al elemento

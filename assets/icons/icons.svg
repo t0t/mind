@@ -59,12 +59,12 @@
 
   <symbol id="toggle" viewBox="0 0 18 16">
     <title>toggle button</title>
-    <path d="M18 1H0m18 14H0m18-7H0" stroke="#1C3F94" stroke-width="2" fill="none"/>
+    <path d="M18 1H0m18 14H0m18-7H0" stroke="#1C3F94" fill="none"/>
   </symbol>
 
-  <symbol id="lupa" viewBox="0 0 16 16">
+  <symbol id="lupa" viewBox="0 0 18 16">
     <title>lupa icon</title>
-    <g stroke="#1C3F94" stroke-width="2" fill="none" fill-rule="evenodd">
+    <g stroke="#1C3F94" stroke-width="1" fill="none" fill-rule="evenodd">
       <circle cx="5" cy="5.4" r="5"/>
       <path d="M8.5 9l5.2 5.1"/>
     </g>
@@ -95,7 +95,7 @@
   </symbol>
 
   <symbol id="arrow-right" viewBox="0 0 25 48">
-  	<path d="M1.5 1.3l22.7 22.6L1.5 46.5" stroke-width="2" fill="none" fill-rule="evenodd"/>
+  	<path d="M1.5 1.3l22.7 22.6L1.5 46.5" fill="none" fill-rule="evenodd"/>
   </symbol>
 
   <symbol id="icon-hamenu" viewBox="0 0 1288 1024">

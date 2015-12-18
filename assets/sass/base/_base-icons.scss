@@ -9,6 +9,9 @@
   }
   &--toggle {
     margin-right: 0;
+    path {
+      stroke-width: 1px;
+    }
     // width: 100%;
   }
   &--facebook { }
@@ -47,6 +50,10 @@
     width: 150px;
     height: 75px;
     stroke: $color-alt;
+    stroke-width: 1px;
+    &:hover {
+      stroke-width: 5px;
+    }
   }
 }
 .icon-subtitle {

@@ -1,3 +1,6 @@
+html.overflow {
+  overflow: hidden;
+}
 body {
     display: flex;
     flex-wrap: wrap;
@@ -5,7 +8,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: $color-base;
-
+    overflow-x: hidden;
     @media screen and (min-width: $bp3) {}
 }
 

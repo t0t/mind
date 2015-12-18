@@ -15,7 +15,6 @@
   }
 }
 
-
 .input-client {
 	flex: 1 50%;
 }
@@ -32,7 +31,7 @@ input {
     outline: none;
   }
 }
-input[type=number] {
+input[ type=number ] {
 	width: 50px;
 	text-align: center;
 }
