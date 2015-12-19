@@ -1396,7 +1396,8 @@ body {
     overflow: hidden; }
     .slider .slider__slides .inner {
       width: 500%;
-      line-height: 0; }
+      line-height: 0;
+      overflow: inherit; }
     .slider .slider__slides figure {
       float: left; }
 

@@ -9,7 +9,9 @@
     overflow: hidden;
     .inner {
       width: 500%;
+      // height: 275px;
       line-height: 0;
+      overflow: inherit;
     }
     figure {
       // width: 20%;
