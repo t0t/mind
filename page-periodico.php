@@ -34,7 +34,7 @@ get_header(); ?>
         <article class="slider__slides__slide">
           <?php if ( has_post_thumbnail() ) : ?>
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-              <?php the_post_thumbnail( 'large' ); ?>
+              <?php the_post_thumbnail( 'medium' ); ?>
             </a>
           <?php endif; ?>
           <h2><?php the_title(); ?></h2>

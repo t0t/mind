@@ -20,13 +20,13 @@
     <div class="slider__slides">
       <div class="inner">
       	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-          <article class="slider__slides__slide">
+          <figure class="slider__slides__slide">
             <?php if ( has_post_thumbnail() ) : ?>
               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                 <?php the_post_thumbnail( 'large' ); ?>
               </a>
             <?php endif; ?>
-          </article>
+          </figure>
       	<?php endwhile; ?>
       </div>
     </div>
