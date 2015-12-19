@@ -73,14 +73,21 @@ input[name="off"] ~ .site-offset {
   li {
     flex: 0 100%;
     text-align: center;
-    &:hover {
-      background-color: darken($color-alt, 5);
-    }
     @media screen and (min-width: 1024px) {
       margin: ($padding_base/4) 0;
     }
   }
 }
+
+// Current selected menu item
+.current_page_item,
+.menu-item:hover {
+  a {
+    // box-shadow: 0 0 0 1px $color-white inset;
+    text-decoration: underline;
+  }
+}
+
 // Navegacion footer
 .site-nav__extra {
   width: 100%;
@@ -94,17 +101,7 @@ input[name="off"] ~ .site-offset {
     }
   }
 }
-// Navegacion footer
-.site-nav__footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: $color-alt;
-  ul {
-    display: flex;
-    text-align: center;
-  }
-}
+
 // Navegacion secundaria
 .site-nav__secondary {
   display: flex;
@@ -116,13 +113,6 @@ input[name="off"] ~ .site-offset {
   a {
     color: $color-black-alpha;
     text-transform: uppercase;
-  }
-}
-
-// current menu item selected
-.current_page_item {
-  a {
-    box-shadow: 0 0 0 1px $color-white inset;
   }
 }
 

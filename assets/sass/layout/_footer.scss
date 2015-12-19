@@ -1,88 +1,56 @@
 // Footer principal
 .main-footer {
   flex-basis: 100%;
-  text-align: center;
   color: $color-base;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
   background-color: $color-alt;
+  min-height: 90px;
+
   @media screen and (max-width: $bp3) {}
-  @media screen and (min-width: $bp3) {}
+
   img[src$=".svg"] {
       @media screen and (max-width: $bp3) {}
   }
-  input[type="submit"] {}
-  order: 3;
+
   a {
     color: $color-base;
     &:hover {
       text-decoration: underline;
     }
   }
+
   &__title {
     text-transform: uppercase;
   }
+
   &__credits {
     @include font-size(13);
   }
 }
 
-.main-footer__social {
-  @media all and (min-width: $bp3) {}
-  a {
-    &:visited {}
-    &:hover {}
-    &::before {}
+.main-footer__title {
+  margin-top: 0;
+}
+
+// Navegacion footer
+.main-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $color-alt;
+  margin-left: $padding_base / 2;
+  margin-right: $padding_base / 2;
+  li {
+    margin-left: $padding_base / 4;
+    margin-right: $padding_base / 4;
   }
 }
-
-.main-footer__brand {
-    address {
-        @include font-size(15);
-    }
-    @media all and (min-width: $bp3) {}
-    img {}
-}
-
+.main-footer__brand {}
+.main-footer__social {}
 .main-footer__brand__name {}
-
 .main-footer__adicional {}
-
-.main-footer__searchform {
-    label {
-        @extend %text-center;
-
-        input {
-            @extend %text-center;
-            display: inline;
-        }
-    }
-
-    @media all and (min-width: $bp3) {
-        // @include order(1);
-        @include max-width(300px);
-        // background-color: pink;
-    }
-
-
-
-
-
-    .search-form
-    .search-submit {
-        display: none;
-    }
-
-    .screen-reader-text {
-        display: none;
-    }
-
-    input {
-        width: 60%;
-    }
-
-    form {
-        margin-bottom: 0;
-    }
-}
+.main-footer__searchform {}

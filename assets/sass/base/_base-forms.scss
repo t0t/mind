@@ -18,7 +18,15 @@
     color: $color-alt;
   }
 }
-
+// Submit buttons all
+input[type="submit"] {
+  padding: ($padding_base / 4) $padding_base / 3;
+  background-color: $color-white;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .input-client {
 	flex: 1 50%;
 }

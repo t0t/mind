@@ -34,7 +34,7 @@
     </div>
 
     <div class="search-form">
-      <form method="get" action="localhost:3000/">
+      <form method="get" action="<?php echo home_url('/'); ?>">
   			<fieldset>
   				<input type="text" name="s" maxlength="128" autocomplete="off" value="">
   				<button type="submit" class="btn--search">

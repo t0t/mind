@@ -1,6 +1,6 @@
 html.overflow {
   // elimina scroll
-  overflow: hidden; 
+  overflow: hidden;
 }
 body {
     display: flex;
@@ -42,12 +42,13 @@ body {
   }
   .site-main__title {
       flex: 1 100%;
-      margin-bottom: 0;
-      @include font-size(20);
-      @media screen and (min-width: 730px) {
-          @include font-size(50);
-          // padding-top: $padding_base;
-      }
+      text-align: center;
+      // margin-bottom: 0;
+      // @include font-size(20);
+      // @media screen and (min-width: 730px) {
+      //     @include font-size(50);
+      //     // padding-top: $padding_base;
+      // }
   }
   .site-main__description {
     background-color: red;
