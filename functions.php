@@ -103,6 +103,12 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 			)
 		);
 
+    /**
+    * Remove wpautop filter
+    */
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+
 		/**
 		 * Add support for automatic feed links.
 		 */
@@ -113,6 +119,18 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+    /**
+    * Excerpt Length & More.
+    */
+    function new_excerpt_length($length) {
+	    return 20;
+    }
+    add_filter('excerpt_length', 'new_excerpt_length');
+
+    function new_excerpt_more( $more ) {
+    	return '<p>Leer más...</p>';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
 		/**
 		 * Register nav menus.
 		 */
@@ -139,19 +157,18 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
 
-
 /***************
  * Woo Theme support Declaration
  ***************/
-add_theme_support( 'woocommerce' );
+// add_theme_support( 'woocommerce' );
 
 // Remove catalog ordering
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 // Remove default WC CSS
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 //unhookd woocommerce wrappers
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+// remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+// remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 //Then hook in your own functions to display the wrappers your theme requires;
 //add_action('woocommerce_before_main_content', 'ek_theme_wrapper_start', 10);
 //add_action('woocommerce_after_main_content', 'ek_theme_wrapper_end', 10);

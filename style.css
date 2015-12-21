@@ -1061,39 +1061,30 @@ body {
   padding-bottom: 25px; }
 
 .posts-wrap {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
-.posts-wrap-item {
-  flex: 1 350px;
-  position: relative;
-  max-width: 420px; }
-  .product-related .posts-wrap-item {
-    margin: 10px;
-    max-width: 220px; }
-    .product-related .posts-wrap-item .btn-singlecart {
-      top: -100px;
-      left: 4px; }
+.posts-wrap__item {
+  flex: 0 310px; }
+
+.posts-wrap__title {
+  flex-basis: 100%;
+  text-align: center; }
 
 .posts-wrap-itemtitle {
-  margin: 0;
-  width: 150px;
-  font-size: 20px;
-  font-size: 1.25rem; }
+  flex-basis: 100%;
+  text-align: center; }
 
-.posts-wrap-figure {
-  position: relative; }
-  .posts-wrap-figure img {
-    background-color: white;
-    width: 100%; }
+.posts-wrap-figure img {
+  width: 100%;
+  margin-bottom: 12.5px; }
 
 .posts-wrap-figcaption {
-  padding: 10px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: white; }
+  font-weight: 600; }
+
+.posts-wrap__excerpt {
+  margin-right: 50px; }
 
 .posts-header {
   flex: 1;
