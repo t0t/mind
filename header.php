@@ -48,6 +48,7 @@
 
     <div class="site-offset">
       <nav class="site-offset__nav" role="navigation">
+
         <?php
           wp_nav_menu( array(
             'theme_location'  => 'main-menu',
@@ -55,21 +56,17 @@
             'menu_class'      => 'site-nav__main'
           ));
         ?>
-        <footer class="site-offset__footer">
-          <div>
-            <svg class="icon icon--logo2">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo2">
-            </svg>
-          </div>
 
+        <footer class="site-offset__footer">
+          <svg class="icon icon--logo2">
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo2">
+          </svg>
           <svg class="icon icon--logo7">
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo7">
           </svg>
-
           <svg class="icon icon--logo3">
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo3">
           </svg>
-
         </footer>
       </nav>
     </div>
