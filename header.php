@@ -62,13 +62,13 @@
             </svg>
           </div>
 
-          <p class="icon-subtitle">Mind.ag</p>
+          <svg class="icon icon--logo7">
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo7">
+          </svg>
 
-          <div>
-            <svg class="icon icon--logo3">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo3">
-            </svg>
-          </div>
+          <svg class="icon icon--logo3">
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo3">
+          </svg>
 
         </footer>
       </nav>

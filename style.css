@@ -810,12 +810,12 @@ textarea {
     width: 150px;
     height: 75px; }
   .icon--logo2 {
-    width: 250px;
-    height: 90px;
+    width: 249px;
+    height: 72px;
     fill: #f7eed4; }
   .icon--logo3 {
-    width: 250px;
-    height: 90px;
+    width: 314px;
+    height: 49px;
     fill: #f7eed4; }
   .icon--logo4 {
     width: 150px;
@@ -826,6 +826,10 @@ textarea {
   .icon--logo6 {
     width: 150px;
     height: auto; }
+  .icon--logo7 {
+    width: 50px;
+    height: 10px;
+    fill: #f7eed4; }
   .icon--arrow-left {
     width: 150px;
     height: 75px;
