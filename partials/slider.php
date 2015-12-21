@@ -11,7 +11,6 @@
     $args = array(
       'post_type' => 'post',
       'showposts' => 5
-      // 'post_per_page' => 2
     );
     $the_query = new WP_Query( $args );
   ?>
