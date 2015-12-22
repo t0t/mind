@@ -26,13 +26,20 @@
     <div class="brand">
 			<a class="brand__logo" href="<?php echo site_url();?>" rel="home">
         <svg class="icon icon--logo">
+          <?php if (is_page('contacto')): ?>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo5">
+          <?php elseif (is_page('newsletter')): ?>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo6">
+          <?php elseif (is_page('about')): ?>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo4">
+          <?php endif; ?>
 	        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo">
   		  </svg>
 			</a>
 			<!-- <h1 class="brand__name"><?php //bloginfo('name');?></h1> -->
 			<!-- <h2 class="brand__description"><?php //bloginfo('description');?></h2> -->
     </div>
-    
+
     <div class="search-form">
       <form method="get" action="<?php echo home_url('/'); ?>">
   			<div class="search-form__fieldset">

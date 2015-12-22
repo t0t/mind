@@ -51,6 +51,13 @@ ul {
   list-style-type: square;
 }
 
+.columns-2 {
+  @media screen and (min-width: 1000px) {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+}
 // a[href*="http"] {
 //     &:hover:before {
 //         content: "#";

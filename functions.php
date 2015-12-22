@@ -106,7 +106,7 @@ if ( ! function_exists( 'alpha_setup' ) ) {
     /**
     * Remove wpautop filter
     */
-    remove_filter( 'the_content', 'wpautop' );
+    // remove_filter( 'the_content', 'wpautop' );
     remove_filter( 'the_excerpt', 'wpautop' );
 
 		/**

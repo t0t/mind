@@ -341,6 +341,14 @@ a:visited {
 ul {
   list-style-type: square; }
 
+@media screen and (min-width: 1000px) {
+  .columns-2 {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2; } }
+
 img,
 svg {
   max-width: 100%;
@@ -822,6 +830,9 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
+  .icon--cc {
+    fill: #f7eed4;
+    width: 100px; }
   .icon--lupa {
     stroke: #1c3f94;
     stroke-width: 1px; }
@@ -974,7 +985,11 @@ table {
     text-transform: uppercase; }
   .main-footer__credits {
     font-size: 13px;
-    font-size: 0.8125rem; }
+    font-size: 0.8125rem;
+    display: flex;
+    align-items: center; }
+    .main-footer__credits svg {
+      margin-right: 12.5px; }
 
 .main-footer__title {
   margin-top: 0; }
@@ -1234,19 +1249,27 @@ body {
   .fixed .brand {
     padding: 25px 50px; } }
 
-/*------------------------------------*    $WIDGETS
+/*------------------------------------*  $WIDGETS
 \*------------------------------------*/
 .widget {
-  flex-basis: 300px; }
+  margin-top: 25px; }
 
 .widget-title {
   text-align: center;
   line-height: inherit; }
 
-.widget--social {
+.widget--social svg {
+  margin-right: 12.5px; }
+
+.widget--social a {
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  flex-basis: 170px;
+  margin-bottom: 12.5px; }
+  .widget--social a:last-child {
+    margin-bottom: 0; }
+  .widget--social a:hover {
+    text-decoration: underline; }
 
 .product {
   display: flex;

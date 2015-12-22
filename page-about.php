@@ -7,26 +7,20 @@ get_header(); ?>
 
 <main class="site-main" role="main">
 
-  <svg class="icon icon--logo4">
-    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo4"></use>
-  </svg>
-
   <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part( 'content', get_post_format() ); ?>
+    <?php get_template_part( 'content', 'page' ); ?>
 
     <div class="widget widget--social">
   		<a href="https://www.facebook.com/holamind/" target="_blank">
   			<svg class="icon icon--facebook">
   				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
-  			</svg>
-        /holamind
+  			</svg> /holamind
       </a>
   		<a href="mailto:flavio.casafibra@gmail.com">
   			<svg class="icon icon--twitter">
 			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
-  		  </svg>
-        @holamind
+  		  </svg> @holamind
       </a>
   	</div>
 

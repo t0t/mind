@@ -1,10 +1,9 @@
 /*------------------------------------*\
-    $WIDGETS
+  $WIDGETS
 \*------------------------------------*/
 
 .widget {
-  // margin: 0 $padding_base/4;
-  flex-basis: 300px; 
+  margin-top: $padding_base / 2;
 }
 
 .widget-title {
@@ -12,18 +11,25 @@
   line-height: inherit;
 }
 
-.widget--external-links {}
-
 .widget--social {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  svg {
+    margin-right: $padding_base / 4;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    flex-basis: 170px;
+    margin-bottom: $padding_base / 4;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
-
+.widget--external-links {}
 .widget--wp {}
-
 .widget--posts {}
-
 .widget--pages {}
-
 .widget--tags {}
