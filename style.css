@@ -589,7 +589,8 @@ img {
 
 .btn--search {
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  padding: 0; }
 
 .btn-singlecart {
   border: none;
@@ -720,21 +721,44 @@ input[type="submit"].btn:hover {
     background-color: transparent; }
 
 .search-form {
-  flex: 0 31%;
-  text-align: right;
-  position: absolute;
-  top: 50px;
-  right: 25px;
-  z-index: 5; }
-  .search-form fieldset {
-    border-bottom: 1px solid #f7eed4; }
-    .search-form fieldset:hover {
-      border-bottom: 1px solid #1c3f94; }
+  flex: 0 210px;
+  z-index: 1;
+  order: 2;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  @media screen and (min-width: 600px) {
+    .search-form {
+      order: 4;
+      margin-top: 0;
+      margin-bottom: 0;
+      flex: 0 31%;
+      text-align: right;
+      position: absolute;
+      top: 50px;
+      right: 25px; } }
+  .search-form__fieldset {
+    display: flex;
+    justify-content: flex-end; }
   .search-form input {
+    max-width: 150px;
     background-color: transparent;
     border-radius: 0;
-    width: 70%;
-    color: #1c3f94; }
+    flex-basis: 90%;
+    text-align: center;
+    color: #1c3f94;
+    margin: 0;
+    border-bottom: 1px solid #efdda9; }
+    @media screen and (min-width: 600px) {
+      .search-form input {
+        border-bottom: 1px solid #f7eed4;
+        flex-basis: 75%; }
+        .search-form input:hover {
+          border-bottom: 1px solid #1c3f94; } }
+  .search-form button {
+    flex-basis: 10%; }
+    @media screen and (min-width: 600px) {
+      .search-form button {
+        flex-basis: 25%; } }
 
 input[type="submit"] {
   padding: 12.5px 16.66667px;
@@ -753,8 +777,8 @@ label {
   margin-right: 10px; }
 
 input {
-  padding: 5px;
-  border-radius: 5px; }
+  padding-right: 5px;
+  line-height: 1; }
   input:focus {
     outline: none; }
 
@@ -798,6 +822,9 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
+  .icon--lupa {
+    stroke: #1c3f94;
+    stroke-width: 1px; }
   .icon--close {
     z-index: 1000;
     fill: #f7eed4;
@@ -841,12 +868,6 @@ textarea {
     stroke-width: 1px; }
     .icon--arrow-right:hover {
       stroke-width: 5px; }
-
-.icon-subtitle {
-  font-weight: light;
-  font-size: .65em;
-  color: #1c3f94;
-  text-transform: uppercase; }
 
 .alert {
   display: flex;
@@ -915,19 +936,25 @@ table {
     border-top: 0; }
 
 .site-header {
-  position: relative;
+  width: 97%;
   display: flex;
   flex-wrap: wrap;
-  flex: 1 100%;
-  justify-content: center;
-  align-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  justify-content: flex-end;
+  align-items: center;
   color: white; }
   .site-header a {
     color: #f7eed4; }
   .site-header label {
     margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .site-header {
+      position: relative;
+      flex: 1 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      flex-direction: row; } }
 
 .main-footer {
   flex-basis: 100%;
@@ -1179,68 +1206,16 @@ body {
   margin-bottom: 0; }
 
 .brand {
-  flex: 2 33%;
-  text-align: center; }
+  flex: 1 100%;
+  text-align: center;
+  order: 3; }
+  @media screen and (min-width: 600px) {
+    .brand {
+      flex: 0 33%; } }
 
 @media screen and (min-width: 600px) {
   .brand__logo svg {
     width: 100%; } }
-
-.brand__logo path.hoja3 {
-  animation-name: rotate;
-  animation-delay: 0.1;
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo path.hoja4 {
-  animation-name: rotate;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo path.hoja5 {
-  animation-name: rotate;
-  animation-delay: 0;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo path.hoja6 {
-  animation-name: rotate;
-  animation-delay: 0.8;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo path.hoja7 {
-  animation-name: rotate;
-  animation-delay: 1s;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo path.hoja8 {
-  animation-name: rotate;
-  animation-delay: 2s;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo:hover path.hoja1 {
-  animation-name: rotate;
-  animation-delay: 0;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
-
-.brand__logo:hover path.hoja8 {
-  animation-name: rotate;
-  animation-delay: 0;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; }
 
 .brand__name {
   font-size: 1.1em;
@@ -1509,10 +1484,15 @@ input:checked ~ label:hover {
   cursor: pointer; }
 
 .toggle {
+  z-index: 50;
   flex: 0 33%;
   position: absolute;
-  top: 50px;
-  left: 50px; }
+  top: 25px;
+  left: 25px; }
+  @media screen and (min-width: 600px) {
+    .toggle {
+      top: 50px;
+      left: 50px; } }
 
 input[name="off"] ~ .site-offset {
   display: none;

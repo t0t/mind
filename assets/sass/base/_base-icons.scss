@@ -2,6 +2,11 @@
   width: 30px;
   height: 30px;
   fill: $color-alt;
+  &--lupa {
+    stroke: $color-alt;
+    stroke-width: 1px;
+    // width: 100%;
+  }
   &--close {
     z-index: 1000;
     fill: $color-base;
@@ -12,7 +17,6 @@
     path {
       stroke-width: 1px;
     }
-    // width: 100%;
   }
   &--facebook { }
   &--logo {
@@ -61,10 +65,4 @@
       stroke-width: 5px;
     }
   }
-}
-.icon-subtitle {
-  font-weight: light;
-  font-size: .65em;
-  color: $color-alt;
-  text-transform: uppercase;
 }

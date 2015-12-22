@@ -1,26 +1,52 @@
 .search-form {
-  flex: 0 31%;
-  text-align: right;
-  position: absolute;
-  top: $padding_base;
-  right: $padding_base / 2;
-  z-index: 5;
-  fieldset {
-    border-bottom: 1px solid $color-base;
-    &:hover {
-      border-bottom: 1px solid $color-alt;
-    }
+  // width: 200px;
+  flex: 0 210px;
+  // background-color: red;
+  z-index: 1;
+  order: 2;
+  margin-top: $padding_base / 2;
+  margin-bottom: $padding_base / 2;
+  @media screen and (min-width: $bp2_3) {
+    order: 4;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex: 0 31%;
+    text-align: right;
+    position: absolute;
+    top: $padding_base;
+    right: $padding_base / 2;
+  }
+  &__fieldset {
+    display: flex;
+    justify-content: flex-end;
   }
   input {
+    max-width: 150px;
     background-color: transparent;
     border-radius: 0;
-    width: 70%;
+    flex-basis: 90%;
+    text-align: center;
     color: $color-alt;
+    margin: 0;
+    border-bottom: 1px solid darken($color-base, 10);
+    @media screen and (min-width: $bp2_3) {
+      border-bottom: 1px solid $color-base;
+      flex-basis: 75%;
+      &:hover {
+        border-bottom: 1px solid $color-alt;
+      }
+    }
+  }
+  button {
+    flex-basis: 10%;
+    @media screen and (min-width: $bp2_3) {
+      flex-basis: 25%;
+    }
   }
 }
 // Submit buttons all
 input[type="submit"] {
-  padding: ($padding_base / 4) $padding_base / 3;
+  padding: ($padding_base / 4) ($padding_base / 3);
   background-color: $color-white;
   text-transform: uppercase;
   &:hover {
@@ -37,8 +63,8 @@ label {
 	margin-right: 10px;
 }
 input {
-	padding: 5px;
-  border-radius: 5px;
+	padding-right: 5px;
+  line-height: 1;
   &:focus {
     outline: none;
   }

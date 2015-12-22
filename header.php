@@ -32,17 +32,17 @@
 			<!-- <h1 class="brand__name"><?php //bloginfo('name');?></h1> -->
 			<!-- <h2 class="brand__description"><?php //bloginfo('description');?></h2> -->
     </div>
-
+    
     <div class="search-form">
       <form method="get" action="<?php echo home_url('/'); ?>">
-  			<fieldset>
-  				<input type="text" name="s" maxlength="128" autocomplete="off" value="">
+  			<div class="search-form__fieldset">
+  				<input type="text" name="s" maxlength="30" autocomplete="off" value="">
   				<button type="submit" class="btn--search">
             <svg class="icon icon--lupa">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa">
             </svg>
           </button>
-  			</fieldset>
+  			</div>
   		</form>
     </div>
 
