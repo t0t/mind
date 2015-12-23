@@ -5,6 +5,8 @@
   <!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
   <?php wp_head(); ?>
   <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
   <script type="text/javascript">
