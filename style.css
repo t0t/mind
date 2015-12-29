@@ -1061,10 +1061,6 @@ body {
   overflow-x: hidden; }
 
 .site-main {
-  flex: 1 85%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
   padding: 25px; }
   @media screen and (min-width: 600px) {
     .site-main {
@@ -1146,8 +1142,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex: 1 400px;
-  width: 100%;
-  padding-top: 25px; }
+  width: 100%; }
 
 .entry__header {
   flex: 0 50%; }
@@ -1157,15 +1152,10 @@ body {
 
 .entry__title {
   text-align: left;
-  margin-bottom: 0;
-  margin-left: 25px;
-  margin-right: 25px; }
+  margin-bottom: 0; }
 
 .entry__content {
   flex: 1 300px; }
-  .entry__content p {
-    margin-left: 25px;
-    margin-right: 25px; }
 
 .entry__image {
   float: left;
@@ -1205,14 +1195,24 @@ body {
     max-width: 1180px;
     width: 100%; } }
 
-.main-post__content__entry small {
-  display: inline-block;
-  font-size: 13px;
-  font-size: 0.8125rem; }
+.main-post__content__entry {
+  max-width: 1024px;
+  margin: auto; }
+  .main-post__content__entry small {
+    display: inline-block;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+  .main-post__content__entry h1 {
+    font-size: 140%;
+    margin-top: 25px; }
+  .main-post__content__entry a {
+    border-bottom: 2px dotted #1c3f94;
+    padding-bottom: 3px; }
 
-.main-post__content__entry a {
-  border-bottom: 2px dotted #1c3f94;
-  padding-bottom: 3px; }
+.two-cols {
+  display: flex; }
+  .two-cols figure {
+    flex: 1 50%; }
 
 .post--sidebar__meta-date {
   font-size: 12px;
@@ -1270,6 +1270,12 @@ body {
     margin-bottom: 0; }
   .widget--social a:hover {
     text-decoration: underline; }
+
+.widget--share {
+  display: flex;
+  justify-content: center; }
+  .widget--share svg {
+    margin-right: 12.5px; }
 
 .product {
   display: flex;

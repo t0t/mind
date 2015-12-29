@@ -4,25 +4,69 @@
    * The default template for displaying content.
    */
 ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
 	<div class="entry__content">
-		<h1 class="entry__title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-		<?php
-			if ( is_search() ) {
-				the_excerpt();
-			} else {
-				the_content( __( 'Continue reading &rarr;', 'alpha' ) );
-				wp_link_pages();
-			}
+    <?php /* Bloques */ if (have_rows('layouts')): ?>
+    	<?php while (have_rows('layouts')): the_row(); ?>
+
+    		<?php /* Layout tipo 1 */ if (get_row_layout() == 'layout1'): ?>
+      		<?php if (have_rows('div')): ?>
+        		<?php while (have_rows('div')): the_row(); ?>
+        		<div class="main-post__content">
+          		<?php if /* Main post content */ (get_sub_field("content")): ?>
+            		<article class="main-post__content__entry" role="article">
+              		<?php /* Header image */ if (get_sub_field("header_image")) { ?>
+              		  <figure><img src="<?php the_sub_field("header_image"); ?>" alt=""></figure>
+              		  <?php } else { ?>
+              		<?php } ?>
+                  <h1 class="entry__title"><?php the_title(); ?></h1>
+                  <?php /* The post content */ the_sub_field("content"); ?>
+            		</article>
+          		<?php endif; /* End Main post content */ ?>
+        		</div>
+        		<?php endwhile; ?>
+      		<?php endif ?>
+    		<?php /* End Layout 1 */ endif; ?>
+
+        <?php /* Layout tipo 2 */ if (get_row_layout() == 'layout2'): ?>
+      		<?php if (have_rows('div')): ?>
+        		<?php while (have_rows('div')): the_row(); ?>
+        		<div class="main-post__content">
+          		<?php if /* Main post content */ (get_sub_field("content")): ?>
+            		<article class="main-post__content__entry" role="article">
+              		<?php /* Header image */ if (get_sub_field("header_image")) { ?>
+                    <div class="two-cols">
+                      <figure><img src="<?php the_sub_field("header_image"); ?>" alt=""></figure>
+                      <figure><img src="<?php the_sub_field("header_image_2"); ?>" alt=""></figure>
+                    </div>
+              		  <?php } else { ?>
+              		<?php } ?>
+                  <h1 class="entry__title"><?php the_title(); ?></h1>
+                  <?php /* The post content */ the_sub_field("content"); ?>
+            		</article>
+          		<?php endif; /* End Main post content */ ?>
+        		</div>
+        		<?php endwhile; ?>
+      		<?php endif ?>
+    		<?php /* End Layout 1 */ endif; ?>
+
+    	<?php /* End Layouts */ endwhile; ?>
+    	<?php else: ?>
+    <?php
+    /* /bloques */
+    endif; ?>
+
+
+    <?php
+			// if ( is_search() ) {
+			// 	the_excerpt();
+			// } else {
+			// 	the_content( __( 'Continue reading &rarr;', 'alpha' ) );
+			// 	wp_link_pages();
+			// }
 		?>
 	</div>
-  <?php
-  /* Header */
-  if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-   <header class="entry__header">
-      <figure class="entry__thumbnail"><?php the_post_thumbnail(); ?></figure>
-   </header>
-  <?php endif; ?>
 
 	<footer class="entry__footer">
 		<?php

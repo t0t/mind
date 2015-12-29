@@ -13,15 +13,13 @@
     }
     figure {
       width: 16.7%;
-      // height: auto;
+      float: left;
       @media screen and (min-width: 1240px) {
         width: 11.20%;
-        // background-color: red;
         img {
           // max-width: 800px;
         }
       }
-      float: left;
     }
   }
 }

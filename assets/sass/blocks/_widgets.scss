@@ -28,6 +28,18 @@
     }
   }
 }
+
+.widget--share {
+  display: flex;
+  justify-content: center;
+  svg {
+    margin-right: $padding_base / 4;
+  }
+  a {
+    &:last-child {}
+    &:hover {}
+  }
+}
 .widget--external-links {}
 .widget--wp {}
 .widget--posts {}
