@@ -13,7 +13,14 @@
     }
     figure {
       width: 16.7%;
-      @media screen and (min-width: 1240px) { width: auto; }
+      // height: auto;
+      @media screen and (min-width: 1240px) {
+        width: 11.20%;
+        // background-color: red;
+        img {
+          // max-width: 800px;
+        }
+      }
       float: left;
     }
   }
@@ -21,7 +28,7 @@
 
 // Slider Nav
 .slider__nav {
-  margin-top: -23%;
+  margin-top: -18%;
   width: 100%;
   label {
     display: none;
@@ -59,7 +66,7 @@
 .slider__dots {
   position: relative;
   z-index: 5;
-  margin-top: 25%;
+  margin-top: 19%;
   text-align: center;
   label {
     border-radius: 10px;
@@ -86,10 +93,10 @@
   // Slides 1024px and up
   @media screen and (min-width: 1240px) {
     #slide1:checked ~ .slider__slides .inner { margin-left: 0 }
-    #slide2:checked ~ .slider__slides .inner { margin-left: -56% }
-    #slide3:checked ~ .slider__slides .inner { margin-left: -125% }
-    #slide4:checked ~ .slider__slides .inner { margin-left: -195% }
-    #slide5:checked ~ .slider__slides .inner { margin-left: -250.6% }
+    #slide2:checked ~ .slider__slides .inner { margin-left: -35% }
+    #slide3:checked ~ .slider__slides .inner { margin-left: -90% }
+    #slide4:checked ~ .slider__slides .inner { margin-left: -146% }
+    #slide5:checked ~ .slider__slides .inner { margin-left: -180% }
   }
 
 // #slide1:checked ~ .slider__slides .inner { margin-left: 0 }

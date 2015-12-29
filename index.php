@@ -26,7 +26,9 @@
             <?php if ( has_post_thumbnail() ) : ?>
               <figure class="posts-wrap-figure">
                 <?php the_post_thumbnail( 'medium' ); ?>
-                <figcaption class="posts-wrap-figcaption"><?php the_title(); ?></figcaption>
+                <figcaption class="posts-wrap-figcaption">
+                  <?php the_title(); ?>
+                </figcaption>
               </figure>
             <?php endif; ?>
             <p class="posts-wrap__excerpt"><?php the_excerpt(); ?></p>
