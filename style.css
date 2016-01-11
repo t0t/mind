@@ -1198,6 +1198,8 @@ body {
 .main-post__content__entry {
   max-width: 1024px;
   margin: auto; }
+  .main-post__content__entry iframe {
+    max-width: 100%; }
   .main-post__content__entry small {
     display: inline-block;
     font-size: 13px;

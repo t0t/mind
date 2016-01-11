@@ -20,6 +20,9 @@
               		  <figure><img src="<?php the_sub_field("header_image"); ?>" alt=""></figure>
               		  <?php } else { ?>
               		<?php } ?>
+              		<?php /* Header video */ if (get_sub_field("header_video")) { ?>
+              		  <?php the_sub_field("header_video"); ?>
+              		<?php } ?>
                   <h1 class="entry__title"><?php the_title(); ?></h1>
                   <?php /* The post content */ the_sub_field("content"); ?>
             		</article>

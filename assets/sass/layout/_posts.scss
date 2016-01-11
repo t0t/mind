@@ -107,6 +107,9 @@
 .main-post__content__entry {
   max-width: 1024px;
   margin: auto;
+  iframe {
+    max-width: 100%;
+  }
   small {
     display: inline-block;
     @include font-size(13);
