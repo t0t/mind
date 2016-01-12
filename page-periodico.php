@@ -6,24 +6,33 @@
 get_header(); ?>
 
 <?php
-  /* Nav extra */
-  get_template_part( 'partials/nav', 'extra' );
+  /* Nav extra */ get_template_part( 'partials/nav', 'extra' );
 ?>
 
 <?php
-  /* SLIDER */
-  get_template_part( 'partials/slider' );
+  /* SLIDER */ get_template_part( 'partials/slider' );
 ?>
 
 <main class="site-main" role="main">
 
   <?php
+    // paging variable
+    // $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+    // if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+    // elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+    // else { $paged = 1; }
+
+    // the arguments
     $args = array(
       'post_type' => 'post',
+      // 'category__in' => array( 3 ),
+      // 'order' => 'DESC',
       'post_per_page' => 5,
-      'showposts' => 3
+      'paged' => $paged,
+      'showposts' => 5
     );
-    $the_query = new WP_Query( $args );
+    $the_query = new WP_Query($args);
+    // $the_query = new WP_Query( $args );
   ?>
   <?php if ( $the_query->have_posts() ) : ?>
 
@@ -49,14 +58,36 @@ get_header(); ?>
 
     </section>
 
+
+    <?php next_posts_link(); ?>
+    <?php previous_posts_link(); ?>
   	<?php /* Restore original Post Data */ wp_reset_postdata(); ?>
+
 
   <?php else : ?>
     <main class="site-main" role="main">
       <h2>There were no results that matched your request</h2>
       <?php get_search_form(); ?>
-     </main>
+    </main>
   <?php endif; ?>
+
+
+
+
+    <?php
+    $temp = $wp_query;
+    $wp_query= null;
+    $wp_query = new WP_Query();
+    $wp_query->query('showposts=2'.'&paged='.$paged);
+    ?>
+    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+    	<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+    <?php endwhile; ?>
+    <?php previous_posts_link('&laquo; Previous') ?>
+    <?php next_posts_link('More &raquo;') ?>
+
+    <?php $wp_query = null; $wp_query = $temp;?>
+
 
 </main>
 
