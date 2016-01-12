@@ -1,37 +1,18 @@
 (function(){
-var boton = document.querySelector('#m');
-console.log(boton);
+
+  // var boton = document.querySelectorAll('.js-social-share');
+  // console.log(boton);
+
 }.call(this));
 
-
-    
 jQuery(document).ready(function($) {
-
 
   // Ham Menu
   $('#m').on('click', function () {
     $('.site-nav__main').toggleClass('active');
   });
 
-
-  console.log('_');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Fit Vids
+  $("body").fitVids();
 
 });

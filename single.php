@@ -23,22 +23,35 @@
 
         <footer class="posts-meta">
           <div class="widget widget--share">
-        		<a href="https://www.facebook.com/holamind/" target="_blank">
+
+        		<a class="js-social-share"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A<?php the_permalink(); ?>%2F"
+              target="_blank"
+              title="Share on Facebook">
         			<svg class="icon icon--facebook">
         				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
         			</svg>
             </a>
-        		<a href="mailto:flavio.casafibra@gmail.com">
+
+            <a class="js-social-share"
+              href="https://twitter.com/intent/tweet/?text=<?php bloginfo('title'); ?>&url=http%3A<?php the_permalink(); ?>"
+              target="_blank"
+              title="Share on Twitter">
         			<svg class="icon icon--twitter">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
         		  </svg>
             </a>
-        		<a href="mailto:flavio.casafibra@gmail.com">
+
+        		<a href="mailto:flavio.casafibra@gmail.com" title="Email this">
         			<svg class="icon icon--email">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
             </a>
+            <!-- https://www.addtoany.com/services/email_button -->
+            <!-- <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script> -->
+
         	</div>
+
           <?php //the_tags('Tags: ') ?>
           <?php //the_category(', ') ?>
           <!-- <div class="posts-nav">

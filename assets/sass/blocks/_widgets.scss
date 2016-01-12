@@ -32,11 +32,17 @@
 .widget--share {
   display: flex;
   justify-content: center;
-  svg {
-    margin-right: $padding_base / 4;
+  .icon {
+    &:hover {
+      fill: $color-alt;
+      stroke: $color-base;
+    }
   }
   a {
-    &:last-child {}
+    margin-right: $padding_base / 4;
+    &:last-child {
+      margin-right: 0;
+    }
     &:hover {}
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "mind",
+  "version": "0.0.0",
+  "homepage": "https://github.com/t0t/mind",
+  "authors": [
+    "Sergio Forés <sergiofores@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.fitvids": "fitvids#~1.1.0"
+  }
+}

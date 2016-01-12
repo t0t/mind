@@ -50,6 +50,7 @@
   margin-left: $padding_base / 2;
   margin-right: $padding_base / 2;
   li {
+    @include font-size(13);
     margin-left: $padding_base / 4;
     margin-right: $padding_base / 4;
   }

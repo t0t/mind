@@ -2,6 +2,21 @@
   width: 30px;
   height: 30px;
   fill: $color-alt;
+  &--facebook {
+    fill: $color-base;
+    stroke: $color-alt;
+    stroke-width: 1px;
+  }
+  &--twitter {
+    fill: $color-base;
+    stroke: $color-alt;
+    stroke-width: 1px;
+  }
+  &--email {
+    fill: $color-base;
+    stroke: $color-alt;
+    stroke-width: 1px;
+  }
   &--cc {
     fill: $color-base;
     width: 100px;
@@ -9,7 +24,8 @@
   &--lupa {
     stroke: $color-alt;
     stroke-width: 1px;
-    // width: 100%;
+    width: 21px;
+    height: 21px;
   }
   &--close {
     z-index: 1000;
@@ -22,7 +38,6 @@
       stroke-width: 1px;
     }
   }
-  &--facebook { }
   &--logo {
     width: 150px;
     height: 75px;
@@ -35,7 +50,7 @@
   // Maña Ind
   &--logo3 {
     width: 314px;
-    height: 49px;
+    height: 46px;
     fill: $color-base;
   }
   &--logo4 {
@@ -54,6 +69,8 @@
     width: 50px;
     height: 10px;
     fill: $color-base;
+    // align-self: flex-end;
+    // padding-bottom: 3px;
   }
   &--arrow-left {
     width: 150px;

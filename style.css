@@ -830,12 +830,26 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
+  .icon--facebook {
+    fill: #f7eed4;
+    stroke: #1c3f94;
+    stroke-width: 1px; }
+  .icon--twitter {
+    fill: #f7eed4;
+    stroke: #1c3f94;
+    stroke-width: 1px; }
+  .icon--email {
+    fill: #f7eed4;
+    stroke: #1c3f94;
+    stroke-width: 1px; }
   .icon--cc {
     fill: #f7eed4;
     width: 100px; }
   .icon--lupa {
     stroke: #1c3f94;
-    stroke-width: 1px; }
+    stroke-width: 1px;
+    width: 21px;
+    height: 21px; }
   .icon--close {
     z-index: 1000;
     fill: #f7eed4;
@@ -853,7 +867,7 @@ textarea {
     fill: #f7eed4; }
   .icon--logo3 {
     width: 314px;
-    height: 49px;
+    height: 46px;
     fill: #f7eed4; }
   .icon--logo4 {
     width: 150px;
@@ -1002,6 +1016,8 @@ table {
   margin-left: 25px;
   margin-right: 25px; }
   .main-footer__nav li {
+    font-size: 13px;
+    font-size: 0.8125rem;
     margin-left: 12.5px;
     margin-right: 12.5px; }
 
@@ -1055,6 +1071,7 @@ body {
   margin-right: auto;
   max-width: 1460px;
   width: 100%;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   background-color: #f7eed4;
@@ -1109,6 +1126,9 @@ body {
 
 .posts-wrap__item {
   flex: 0 310px; }
+  .posts-wrap__item p {
+    font-size: 14px;
+    font-size: 0.875rem; }
 
 .posts-wrap__title {
   flex-basis: 100%;
@@ -1156,6 +1176,9 @@ body {
 
 .entry__content {
   flex: 1 300px; }
+  .entry__content p {
+    font-size: 14px;
+    font-size: 0.875rem; }
 
 .entry__image {
   float: left;
@@ -1228,7 +1251,7 @@ body {
   order: 3; }
   @media screen and (min-width: 600px) {
     .brand {
-      flex: 0 33%; } }
+      flex: 0 10%; } }
 
 @media screen and (min-width: 600px) {
   .brand__logo svg {
@@ -1276,8 +1299,13 @@ body {
 .widget--share {
   display: flex;
   justify-content: center; }
-  .widget--share svg {
+  .widget--share .icon:hover {
+    fill: #1c3f94;
+    stroke: #f7eed4; }
+  .widget--share a {
     margin-right: 12.5px; }
+    .widget--share a:last-child {
+      margin-right: 0; }
 
 .product {
   display: flex;
@@ -1555,7 +1583,7 @@ input[name="off"] ~ .site-offset {
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     margin-left: auto;
     margin-right: auto;
     max-width: 1460px;
@@ -1593,6 +1621,9 @@ input[name="off"] ~ .site-offset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+  .site-nav__extra li {
+    font-size: 13px;
+    font-size: 0.8125rem; }
   .site-nav__extra a {
     padding: 5px 25px; }
     .site-nav__extra a:hover {
