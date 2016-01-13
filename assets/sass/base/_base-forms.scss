@@ -46,25 +46,24 @@
 }
 // Submit buttons all
 input[type="submit"] {
+  width: inherit;
   padding: ($padding_base / 4) ($padding_base / 3);
-  background-color: $color-white;
+  color: $color-alt;
+  background-color: $bgcolor-fields;;
   text-transform: uppercase;
   &:hover {
     text-decoration: underline;
   }
 }
-.input-client {
-	flex: 1 50%;
-}
-.input-text {
-  background-color: $site-main-bgcolor;
-}
 label {
 	margin-right: 10px;
 }
 input {
-	padding-right: 5px;
+  width: 100%;
+	padding: $padding-fields;
   line-height: 1;
+  color: $color-fields;
+  background-color: $bgcolor-fields;
   &:focus {
     outline: none;
   }
@@ -78,6 +77,8 @@ textarea {
   width: 100%;
   border: none;
 	padding: 5px;
+  color: $color-fields;
+  background-color: $bgcolor-fields;
 }
 // $product
 // [class*=product] {

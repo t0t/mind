@@ -15,14 +15,21 @@ get_header(); ?>
     <div id="mc_embed_signup">
       <form action="//mind.us12.list-manage.com/subscribe/post?u=7ed74aabd22b7874fc8208ad3&amp;id=f6bfece656" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-            <div class="mc-field-group">
-              <label for="mce-FNAME">Nombre </label>
+
+            <div class="fields-group mc-field-group">
+              <label for="mce-FNAME">
+                Nombre
+              </label>
               <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            </div>
-            <div class="mc-field-group">
-            	<label for="mce-EMAIL">Email </label>
+            <!-- </div>
+
+            <div class="mc-field-group"> -->
+            	<label for="mce-EMAIL">
+                Email
+              </label>
             	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
+
             <!-- <div class="mc-field-group">
             	<label for="mce-LNAME">Last Name </label>
             	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">

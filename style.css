@@ -773,24 +773,23 @@ input[type="submit"].btn:hover {
         flex-basis: 25%; } }
 
 input[type="submit"] {
+  width: inherit;
   padding: 12.5px 16.66667px;
-  background-color: white;
+  color: #1c3f94;
+  background-color: #f7eed4;
   text-transform: uppercase; }
   input[type="submit"]:hover {
     text-decoration: underline; }
-
-.input-client {
-  flex: 1 50%; }
-
-.input-text {
-  background-color: white; }
 
 label {
   margin-right: 10px; }
 
 input {
-  padding-right: 5px;
-  line-height: 1; }
+  width: 100%;
+  padding: 7px;
+  line-height: 1;
+  color: #1c3f94;
+  background-color: #f7eed4; }
   input:focus {
     outline: none; }
 
@@ -801,7 +800,9 @@ input[type=number] {
 textarea {
   width: 100%;
   border: none;
-  padding: 5px; }
+  padding: 5px;
+  color: #1c3f94;
+  background-color: #f7eed4; }
 
 @keyframes fade {
   0% {
@@ -966,10 +967,10 @@ table {
     border-top: 0; }
 
 body:not(.home).page > header .icon--logo {
-  fill: white; }
+  fill: #f7eed4; }
 
 body:not(.home).page > header .icon--toggle {
-  stroke: white; }
+  stroke: #f7eed4; }
 
 body:not(.home).page > header .search-form {
   display: none; }
@@ -977,10 +978,10 @@ body:not(.home).page > header .search-form {
 body:not(.home).page > header,
 body:not(.home).page > main {
   background-color: #1c3f94;
-  color: white; }
+  color: #f7eed4; }
   body:not(.home).page > header a,
   body:not(.home).page > main a {
-    color: white; }
+    color: #f7eed4; }
 
 body:not(.home).page > footer {
   background-color: #f7eed4;
@@ -989,6 +990,30 @@ body:not(.home).page > footer {
     color: #1c3f94; }
   body:not(.home).page > footer .icon--cc {
     fill: #1c3f94; }
+
+@media screen and (min-width: 1150px) {
+  body:not(.home).page-template-page-contacto > .site-main,
+  body:not(.home).page-template-page-newsletter > .site-main {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 150px; }
+    body:not(.home).page-template-page-contacto > .site-main h1,
+    body:not(.home).page-template-page-newsletter > .site-main h1 {
+      padding-bottom: 75px; } }
+
+.fields-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 33.33333px; }
+  .fields-group div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 260px; }
+  .fields-group div:last-child {
+    margin-left: 50px; }
+  .fields-group label {
+    padding-bottom: 5px; }
 
 .site-header {
   width: 97%;

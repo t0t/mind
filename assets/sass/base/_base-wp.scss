@@ -6,18 +6,18 @@ body {
   &:not(.home) {
     &.page {
       > header {
-        .icon--logo { fill: $color-white; }
+        .icon--logo { fill: $color-base; }
         .icon--toggle {
-          stroke: $color-white;
+          stroke: $color-base;
         }
         .search-form { display: none; }
       }
       > header,
       > main {
         background-color: $color-alt;
-        color: $color-white;
+        color: $color-base;
         a {
-          color: $color-white;
+          color: $color-base;
         }
       }
       > footer {
@@ -27,6 +27,38 @@ body {
         .icon--cc { fill: $color-alt; }
       }
     }
+    &.page-template-page-contacto,
+    &.page-template-page-newsletter {
+      > .site-main {
+        @media screen and (min-width: 1150px) {
+          padding-left: $padding_base * 5;
+          padding-right: $padding_base * 5;
+          padding-bottom: $padding_base * 3;
+          h1 {
+            padding-bottom: $padding_base * 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Custom Contact Form 7
+.fields-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: $padding_base / 1.5;
+  div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 260px;
+  }
+  div:last-child {
+    margin-left: $padding_base;
+  }
+  label {
+    padding-bottom: 5px;
   }
 }
 
