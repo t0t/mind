@@ -157,6 +157,10 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
 
+  
+
+
+
 /***************
  * Woo Theme support Declaration
  ***************/

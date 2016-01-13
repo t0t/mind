@@ -26,6 +26,10 @@
                   <h1 class="entry__title"><?php the_title(); ?></h1>
                   <?php /* The post content */ the_sub_field("content"); ?>
             		</article>
+
+                <!-- https://codex.wordpress.org/Function_Reference/get_query_var -->
+                <?php echo do_shortcode('<!--nextpage-->'); ?>
+
           		<?php endif; /* End Main post content */ ?>
         		</div>
         		<?php endwhile; ?>

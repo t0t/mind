@@ -16,23 +16,33 @@ get_header(); ?>
 <main class="site-main" role="main">
 
   <?php
-    // paging variable
-    // $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+    // $page = get_query_var( 'page', 1 );
+    $paged = (get_query_var('page')) ? get_query_var('page') : 1;
     // if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
     // elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
     // else { $paged = 1; }
+
+    //$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+    // $paged = ( get_query_var('page')) ? get_query_var('page') : 1;
 
     // the arguments
     $args = array(
       'post_type' => 'post',
       // 'category__in' => array( 3 ),
       // 'order' => 'DESC',
-      'post_per_page' => 5,
-      'paged' => $paged,
-      'showposts' => 5
+      'posts_per_page' => 8,
+      'paged' => $paged
+      // 'paged' => $paged
+      // 'showposts' => 5
     );
+  //   $the_query = new WP_Query( array(
+  //     'posts_per_page' => 3,
+  //     'paged' => $paged
+  //  ) );
+  //  $the_query = new WP_Query('posts_per_page=3&page=' . '$paged');
+
+   //echo (int) $paged;
     $the_query = new WP_Query($args);
-    // $the_query = new WP_Query( $args );
   ?>
   <?php if ( $the_query->have_posts() ) : ?>
 
@@ -58,9 +68,21 @@ get_header(); ?>
 
     </section>
 
+<?php //wp_pagenavi(); ?>
 
-    <?php next_posts_link(); ?>
-    <?php previous_posts_link(); ?>
+    <?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+      <nav class="prev-next-posts">
+        <div class="prev-posts-link">
+          <?php //echo get_next_posts_link( 'Pagina anterior', $the_query->max_num_pages ); // display older posts link ?>
+        </div>
+        <div class="next-posts-link">
+          <?php echo get_previous_posts_link( 'Siguiente página' ); // display newer posts link ?>
+        </div>
+      </nav>
+    <?php } ?>
+
+    <!-- <?php next_posts_link(); ?>
+    <?php previous_posts_link(); ?> -->
   	<?php /* Restore original Post Data */ wp_reset_postdata(); ?>
 
 
@@ -73,20 +95,6 @@ get_header(); ?>
 
 
 
-
-    <?php
-    $temp = $wp_query;
-    $wp_query= null;
-    $wp_query = new WP_Query();
-    $wp_query->query('showposts=2'.'&paged='.$paged);
-    ?>
-    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-    	<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-    <?php endwhile; ?>
-    <?php previous_posts_link('&laquo; Previous') ?>
-    <?php next_posts_link('More &raquo;') ?>
-
-    <?php $wp_query = null; $wp_query = $temp;?>
 
 
 </main>

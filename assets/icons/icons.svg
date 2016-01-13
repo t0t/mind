@@ -67,7 +67,7 @@
 
   <symbol id="toggle" viewBox="0 0 18 16">
     <title>Toggle button</title>
-    <path d="M18 1H0m18 14H0m18-7H0" stroke="#1C3F94" fill="none"/>
+    <path d="M18 1H0m18 14H0m18-7H0" fill="none"/>
   </symbol>
 
   <symbol id="lupa" viewBox="0 0 16 17">
