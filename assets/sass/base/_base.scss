@@ -28,7 +28,6 @@ html {}
 
 body {
   font-family: $basefont;
-  // @include font-size(12);
   font-size: 100%;
   font-weight: 100;
   // line-height: 12;
@@ -98,35 +97,33 @@ mark {
 }
 
 /*------------------------------------*\
-    $TIPOGRAFiA
+  $TIPOGRAFiA
 \*------------------------------------*/
 
 // HEADINGS ====================================================
+
+h1 {
+  @include font-size(35);
+  line-height: 1;
+  margin-bottom: $padding_base / 1.5;
+  letter-spacing: $baseletterspacing - 1;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $altfont;
-  letter-spacing: $baseletterspacing - 1;
+  font-weight: 100;
+  // font-family: $altfont;
   text-rendering: optimizelegibility;
-  font-weight: normal;
-  &.altheader {
-    @extend %text-right;
-  }
 }
 
-h1 small,
-h2 small,
-h3 small {
-  color: $color-alt;
-  @include font-size(32);
-  font-style: italic;
-  letter-spacing: $baseletterspacing;
-}
-
-@each $header, $margin-bot, $font-size, $line-height in (h1, 25, 40, 1) (h2, 3, 30, 1.1) (h3, 0, 30, 1) (h4, 0, 19, 3.4) (h5, 7, 19, 2) (h6, 7, 19, 1) {
+@each $header, $margin-bot, $font-size, $line-height in
+(h2, 3, 30, 1.1)
+(h3, 0, 30, 1)
+(h4, 0, 19, 3.4) {
   #{$header}, .#{$header} {
     margin-bottom: #{$margin-bot}px;
     @include font-size($font-size);

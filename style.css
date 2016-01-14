@@ -303,14 +303,6 @@ hr {
 .post--sidebar, .nav-secondary li, .nav--posts ul li {
   text-align: center; }
 
-h1.altheader,
-h2.altheader,
-h3.altheader,
-h4.altheader,
-h5.altheader,
-h6.altheader {
-  text-align: right; }
-
 .nav-secondary ul {
   padding: 0; }
 
@@ -372,35 +364,23 @@ img[src$=".svg"] {
 mark {
   background: white; }
 
-/*------------------------------------*    $TIPOGRAFiA
+/*------------------------------------*  $TIPOGRAFiA
 \*------------------------------------*/
+h1 {
+  font-size: 35px;
+  font-size: 2.1875rem;
+  line-height: 1;
+  margin-bottom: 33.33333px;
+  letter-spacing: 0px; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Slab", serif;
-  letter-spacing: 0px;
-  text-rendering: optimizelegibility;
-  font-weight: normal; }
-
-h1 small,
-h2 small,
-h3 small {
-  color: #1c3f94;
-  font-size: 32px;
-  font-size: 2rem;
-  font-style: italic;
-  letter-spacing: 1px; }
-
-h1, .h1 {
-  margin-bottom: 25px;
-  font-size: 40px;
-  font-size: 2.5rem;
-  line-height: 1; }
-  h1 span, .h1 span {
-    color: #abd1b2; }
+  font-weight: 100;
+  text-rendering: optimizelegibility; }
 
 h2, .h2 {
   margin-bottom: 3px;
@@ -424,22 +404,6 @@ h4, .h4 {
   font-size: 1.1875rem;
   line-height: 3.4; }
   h4 span, .h4 span {
-    color: #abd1b2; }
-
-h5, .h5 {
-  margin-bottom: 7px;
-  font-size: 19px;
-  font-size: 1.1875rem;
-  line-height: 2; }
-  h5 span, .h5 span {
-    color: #abd1b2; }
-
-h6, .h6 {
-  margin-bottom: 7px;
-  font-size: 19px;
-  font-size: 1.1875rem;
-  line-height: 1; }
-  h6 span, .h6 span {
     color: #abd1b2; }
 
 p,
@@ -1201,7 +1165,7 @@ body {
   margin-bottom: 12.5px; }
 
 .posts-wrap-figcaption {
-  font-weight: 600; }
+  font-weight: 400; }
 
 .posts-wrap__excerpt {
   margin-right: 25px; }
@@ -1230,7 +1194,8 @@ body {
 
 .entry__title {
   text-align: left;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-weight: 400; }
 
 .entry__content {
   flex: 1 300px; }

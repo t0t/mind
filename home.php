@@ -48,7 +48,7 @@ get_header(); ?>
 
     <section class="posts-wrap">
 
-      <h1 class="posts-wrap__title"><?php the_title(); ?></h1>
+      <!-- <h1 class="posts-wrap__title"><?php //the_title(); ?></h1> -->
 
     	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 

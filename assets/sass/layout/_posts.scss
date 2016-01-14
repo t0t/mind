@@ -26,7 +26,7 @@
     }
   }
   .posts-wrap-figcaption {
-    font-weight: 600;
+    font-weight: 400;
   }
   .posts-wrap__excerpt {
     margin-right: $padding_base / 2;
@@ -58,6 +58,7 @@
 .entry__title {
   text-align: left;
   margin-bottom: 0;
+  font-weight: 400;
 }
 .entry__content {
   flex: 1 300px;
