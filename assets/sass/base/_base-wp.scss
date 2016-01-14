@@ -19,6 +19,20 @@ body {
         a {
           color: $color-base;
         }
+        p {
+          @include font-size(14);
+          font-weight: 100;
+        }
+      }
+      @media screen and (min-width: 1150px) {
+        > main {
+          padding-left: $padding_base * 5;
+          padding-right: $padding_base * 5;
+          padding-bottom: $padding_base * 3;
+          h1 {
+            padding-bottom: $padding_base / 2;
+          }
+        }
       }
       > footer {
         background-color: $color-base;
@@ -30,14 +44,7 @@ body {
     &.page-template-page-contacto,
     &.page-template-page-newsletter {
       > .site-main {
-        @media screen and (min-width: 1150px) {
-          padding-left: $padding_base * 5;
-          padding-right: $padding_base * 5;
-          padding-bottom: $padding_base * 3;
-          h1 {
-            padding-bottom: $padding_base * 1.5;
-          }
-        }
+
       }
     }
   }
@@ -58,7 +65,7 @@ body {
     margin-left: $padding_base;
   }
   label {
-    padding-bottom: 5px;
+    
   }
 }
 

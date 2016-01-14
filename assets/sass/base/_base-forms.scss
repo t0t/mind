@@ -51,12 +51,16 @@ input[type="submit"] {
   color: $color-alt;
   background-color: $bgcolor-fields;;
   text-transform: uppercase;
+  margin-top: $padding_base / 1.5;
   &:hover {
     text-decoration: underline;
   }
 }
 label {
 	margin-right: 10px;
+  padding-bottom: 5px;
+  display: block;
+  @include font-size(14);
 }
 input {
   width: 100%;
@@ -76,7 +80,7 @@ input[ type=number ] {
 textarea {
   width: 100%;
   border: none;
-	padding: 5px;
+  padding: $padding-fields;
   color: $color-fields;
   background-color: $bgcolor-fields;
 }

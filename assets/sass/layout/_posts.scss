@@ -105,11 +105,13 @@
 .main-post__content {
   section {}
   @media all and (min-width: $bp3) {}
-  @media all and (min-width: $bp2) {}
 }
 
 .main-post__content__entry {
-  max-width: 1024px;
+  @media all and (min-width: $bp0) {
+    max-width: 1024px;
+  }
+  max-width: 800px;
   margin: auto;
   iframe {
     max-width: 100%;

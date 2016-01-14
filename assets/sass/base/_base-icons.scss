@@ -2,11 +2,7 @@
   width: 30px;
   height: 30px;
   fill: $color-alt;
-  &--facebook {
-    fill: $color-base;
-    stroke: $color-alt;
-    stroke-width: 1px;
-  }
+  &--facebook,
   &--twitter {
     fill: $color-base;
     stroke: $color-alt;

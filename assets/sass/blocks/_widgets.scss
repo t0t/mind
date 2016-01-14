@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .widget {
-  margin-top: $padding_base / 2;
+  margin-top: $padding_base;
 }
 
 .widget-title {
@@ -12,8 +12,20 @@
 }
 
 .widget--social {
-  svg {
+  display: flex;
+  align-items: flex-start;
+  .icon {
     margin-right: $padding_base / 4;
+    fill: $color-base;
+    stroke: $color-alt;
+    stroke-width: 1px;
+    .page & {
+      &:hover {
+        fill: none;
+        stroke: $color-base;
+        stroke-width: 1px;
+      }
+    }
   }
   a {
     display: flex;
@@ -25,6 +37,13 @@
     }
     &:hover {
       text-decoration: underline;
+      .page & {
+        .icon {
+          fill: none;
+          stroke: $color-base;
+          stroke-width: 1px;
+        }
+      }
     }
   }
 }

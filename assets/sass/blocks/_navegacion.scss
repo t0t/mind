@@ -112,8 +112,10 @@ input[name="off"] ~ .site-offset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 0;
   li {
-    @include font-size(13);
+    @include font-size(14);
+    // @include font-size(13);
   }
   a {
     padding: 5px $padding_base/2;
@@ -127,7 +129,7 @@ input[name="off"] ~ .site-offset {
 .site-nav__secondary {
   display: flex;
   justify-content: flex-end;
-  @include font-size(14);
+  // @include font-size(14);
   margin-top: 0;
   margin-bottom: 0;
   flex: 1;

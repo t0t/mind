@@ -322,13 +322,12 @@ h6.altheader {
 */
 body {
   font-family: "Roboto Slab", serif;
-  font-size: 12px;
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 100%;
+  font-weight: 100;
   color: black;
   letter-spacing: 1px;
   background-color: #fbf7e9; }
-  @media screen and (min-width: 450px) {
+  @media screen and (min-width: 1460px) {
     body {
       font-size: 18px;
       font-size: 1.125rem; } }
@@ -363,8 +362,8 @@ img[src$=".svg"] {
   height: auto; }
 
 ::selection {
-  color: black;
-  background-color: #f7eed4;
+  color: #1c3f94;
+  background-color: white;
   text-shadow: none; }
 
 ::-webkit-input-placeholder {
@@ -777,12 +776,17 @@ input[type="submit"] {
   padding: 12.5px 16.66667px;
   color: #1c3f94;
   background-color: #f7eed4;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-top: 33.33333px; }
   input[type="submit"]:hover {
     text-decoration: underline; }
 
 label {
-  margin-right: 10px; }
+  margin-right: 10px;
+  padding-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem; }
 
 input {
   width: 100%;
@@ -800,7 +804,7 @@ input[type=number] {
 textarea {
   width: 100%;
   border: none;
-  padding: 5px;
+  padding: 7px;
   color: #1c3f94;
   background-color: #f7eed4; }
 
@@ -835,10 +839,7 @@ textarea {
   width: 30px;
   height: 30px;
   fill: #1c3f94; }
-  .icon--facebook {
-    fill: #f7eed4;
-    stroke: #1c3f94;
-    stroke-width: 1px; }
+  .icon--facebook,
   .icon--twitter {
     fill: #f7eed4;
     stroke: #1c3f94;
@@ -982,6 +983,19 @@ body:not(.home).page > main {
   body:not(.home).page > header a,
   body:not(.home).page > main a {
     color: #f7eed4; }
+  body:not(.home).page > header p,
+  body:not(.home).page > main p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 100; }
+
+@media screen and (min-width: 1150px) {
+  body:not(.home).page > main {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 150px; }
+    body:not(.home).page > main h1 {
+      padding-bottom: 25px; } }
 
 body:not(.home).page > footer {
   background-color: #f7eed4;
@@ -990,16 +1004,6 @@ body:not(.home).page > footer {
     color: #1c3f94; }
   body:not(.home).page > footer .icon--cc {
     fill: #1c3f94; }
-
-@media screen and (min-width: 1150px) {
-  body:not(.home).page-template-page-contacto > .site-main,
-  body:not(.home).page-template-page-newsletter > .site-main {
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-bottom: 150px; }
-    body:not(.home).page-template-page-contacto > .site-main h1,
-    body:not(.home).page-template-page-newsletter > .site-main h1 {
-      padding-bottom: 75px; } }
 
 .fields-group {
   display: flex;
@@ -1012,8 +1016,6 @@ body:not(.home).page > footer {
     flex: 1 260px; }
   .fields-group div:last-child {
     margin-left: 50px; }
-  .fields-group label {
-    padding-bottom: 5px; }
 
 .site-header {
   width: 97%;
@@ -1139,6 +1141,8 @@ body {
   @media screen and (min-width: 1100px) {
     .site-main {
       flex: 1 77%; } }
+  .site-main p {
+    line-height: 1.8; }
 
 .site-main__content {
   padding-left: 25px;
@@ -1273,8 +1277,11 @@ body {
     width: 100%; } }
 
 .main-post__content__entry {
-  max-width: 1024px;
+  max-width: 800px;
   margin: auto; }
+  @media all and (min-width: 1460px) {
+    .main-post__content__entry {
+      max-width: 1024px; } }
   .main-post__content__entry iframe {
     max-width: 100%; }
   .main-post__content__entry small {
@@ -1331,24 +1338,37 @@ body {
 /*------------------------------------*  $WIDGETS
 \*------------------------------------*/
 .widget {
-  margin-top: 25px; }
+  margin-top: 50px; }
 
 .widget-title {
   text-align: center;
   line-height: inherit; }
 
-.widget--social svg {
-  margin-right: 12.5px; }
-
-.widget--social a {
+.widget--social {
   display: flex;
-  align-items: center;
-  flex-basis: 170px;
-  margin-bottom: 12.5px; }
-  .widget--social a:last-child {
-    margin-bottom: 0; }
-  .widget--social a:hover {
-    text-decoration: underline; }
+  align-items: flex-start; }
+  .widget--social .icon {
+    margin-right: 12.5px;
+    fill: #f7eed4;
+    stroke: #1c3f94;
+    stroke-width: 1px; }
+    .page .widget--social .icon:hover {
+      fill: none;
+      stroke: #f7eed4;
+      stroke-width: 1px; }
+  .widget--social a {
+    display: flex;
+    align-items: center;
+    flex-basis: 170px;
+    margin-bottom: 12.5px; }
+    .widget--social a:last-child {
+      margin-bottom: 0; }
+    .widget--social a:hover {
+      text-decoration: underline; }
+      .page .widget--social a:hover .icon {
+        fill: none;
+        stroke: #f7eed4;
+        stroke-width: 1px; }
 
 .widget--share {
   display: flex;
@@ -1674,10 +1694,11 @@ input[name="off"] ~ .site-offset {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 0; }
   .site-nav__extra li {
-    font-size: 13px;
-    font-size: 0.8125rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
   .site-nav__extra a {
     padding: 5px 25px; }
     .site-nav__extra a:hover {
@@ -1686,8 +1707,6 @@ input[name="off"] ~ .site-offset {
 .site-nav__secondary {
   display: flex;
   justify-content: flex-end;
-  font-size: 14px;
-  font-size: 0.875rem;
   margin-top: 0;
   margin-bottom: 0;
   flex: 1; }

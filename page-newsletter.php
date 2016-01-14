@@ -17,17 +17,14 @@ get_header(); ?>
           <div id="mc_embed_signup_scroll">
 
             <div class="fields-group mc-field-group">
-              <label for="mce-FNAME">
-                Nombre
-              </label>
-              <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            <!-- </div>
-
-            <div class="mc-field-group"> -->
-            	<label for="mce-EMAIL">
-                Email
-              </label>
-            	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              <div>
+                <label for="mce-FNAME">Nombre</label>
+                <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+              </div>
+            	<div>
+              	<label for="mce-EMAIL">Email</label>
+              	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
             </div>
 
             <!-- <div class="mc-field-group">
