@@ -1244,9 +1244,6 @@ body {
 .main-post__content__entry {
   max-width: 800px;
   margin: auto; }
-  @media all and (min-width: 1460px) {
-    .main-post__content__entry {
-      max-width: 1024px; } }
   .main-post__content__entry iframe {
     max-width: 100%; }
   .main-post__content__entry small {

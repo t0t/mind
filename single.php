@@ -42,7 +42,7 @@
         		  </svg>
             </a>
 
-        		<a href="mailto:flavio.casafibra@gmail.com" title="Email this">
+        		<a href="mailto:hola@mind.ag" title="Email this">
         			<svg class="icon icon--email">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
