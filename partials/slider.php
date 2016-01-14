@@ -19,12 +19,19 @@
     <div class="slider__slides">
       <div class="inner">
       	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
           <figure class="slider__slides__slide">
-            <?php if ( has_post_thumbnail() ) : ?>
+
+            <?php if( get_field('img_slider') ): ?>
               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                <?php the_post_thumbnail( 'large' ); ?>
+                <?php
+                  $image = get_field('img_slider');
+                  $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                  if( $image ) { echo wp_get_attachment_image( $image, $size ); }
+                ?>
               </a>
             <?php endif; ?>
+
           </figure>
       	<?php endwhile; ?>
       </div>
