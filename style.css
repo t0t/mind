@@ -862,8 +862,6 @@ textarea {
     height: 75px;
     stroke: #1c3f94;
     stroke-width: 1px; }
-    .icon--arrow-right:hover {
-      stroke-width: 5px; }
 
 .alert {
   display: flex;
@@ -1688,19 +1686,25 @@ input[name="off"] ~ .site-offset {
 
 .pagination {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin: 0;
+  padding-top: 50px; }
   .pagination .icon {
     width: 50px;
-    height: 20px; }
+    height: 20px;
+    stroke-width: 3px; }
   .pagination a {
-    padding: 25px; }
+    padding: 25px;
+    color: #1c3f94; }
+    .pagination a:hover {
+      color: black; }
   .pagination li {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #1c3f94; }
+    font-size: 14px;
+    font-size: 0.875rem; }
     .pagination li:hover {
-      color: inherit;
       text-decoration: underline; }
 
 .nav-secondary ul {

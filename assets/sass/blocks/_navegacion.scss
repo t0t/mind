@@ -154,25 +154,29 @@ input[name="off"] ~ .site-offset {
 .pagination {
   display: flex;
   justify-content: flex-end;
+  margin: 0;
+  padding-top: $padding_base;
   .icon {
     width: 50px;
     height: 20px;
+    stroke-width: 3px;
   }
   &__prev {}
   &__next {}
   a {
     padding: $padding_base / 2;
+    color: $color-alt;
+    &:hover {
+      color: $color-black;
+    }
   }
   li {
     display: flex;
     align-items: center;
     text-align: center;
-    // min-width: 90%;
-    // display: block;
-    color: $color-alt;
+    @include font-size(14);
     &:hover {
       // background-color: darken($color-base, 3);;
-      color: inherit;
       text-decoration: underline;
     }
   }
