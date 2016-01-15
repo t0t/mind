@@ -981,6 +981,9 @@ body:not(.home).page > footer {
   .fields-group div:last-child {
     margin-left: 50px; }
 
+.readmore {
+  color: #1c3f94; }
+
 .site-header {
   width: 97%;
   display: flex;

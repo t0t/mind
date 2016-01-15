@@ -122,15 +122,15 @@ if ( ! function_exists( 'alpha_setup' ) ) {
     /**
     * Excerpt Length & More.
     */
-    function new_excerpt_length($length) {
-	    return 20;
-    }
-    add_filter('excerpt_length', 'new_excerpt_length');
-
-    function new_excerpt_more( $more ) {
-    	return '<p>Leer más...</p>';
-    }
-    add_filter('excerpt_more', 'new_excerpt_more');
+    // function custom_excerpt_length( $length ) {
+    //   return 20;
+    // }
+    // add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+    //
+    // function new_excerpt_more( $more ) {
+    // 	return '<p class="excerpt">Leer mas</p>';
+    // }
+    // add_filter( 'excerpt_more', 'new_excerpt_more' );
 		/**
 		 * Register nav menus.
 		 */
@@ -157,7 +157,7 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
 
-  
+
 
 
 

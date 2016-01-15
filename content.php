@@ -28,7 +28,7 @@
             		</article>
 
                 <!-- https://codex.wordpress.org/Function_Reference/get_query_var -->
-                <?php echo do_shortcode('<!--nextpage-->'); ?>
+                <?php //echo do_shortcode('<!--nextpage-->'); ?>
 
           		<?php endif; /* End Main post content */ ?>
         		</div>
