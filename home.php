@@ -31,7 +31,7 @@
 
   </section>
 
-	<?php /* SLIDER */ get_template_part( 'partials/paginacion' ); ?>
+	<?php /* PAGINACION */ get_template_part( 'partials/paginacion' ); ?>
 
 </main>
 

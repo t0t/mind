@@ -24,9 +24,16 @@
         <footer class="posts-meta">
           <div class="widget widget--share">
 
+            <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title()))?>'">
+              FB
+            </a>
+        		<a href="http://twitter.com/home?status='. urlencode(get_the_title()). '+'. urlencode(get_the_permalink()) . '">
+        		  TW
+        		</a>
+
         		<a class="js-social-share"
               href="https://www.facebook.com/sharer/sharer.php?u=http%3A<?php the_permalink(); ?>%2F"
-              target="_blank"
+              target="_new"
               title="Share on Facebook">
         			<svg class="icon icon--facebook">
         				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
@@ -35,14 +42,16 @@
 
             <a class="js-social-share"
               href="https://twitter.com/intent/tweet/?text=<?php bloginfo('title'); ?>&url=http%3A<?php the_permalink(); ?>"
-              target="_blank"
+              target="_new"
               title="Share on Twitter">
         			<svg class="icon icon--twitter">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
         		  </svg>
             </a>
 
-        		<a href="mailto:hola@mind.ag" title="Email this">
+        		<a href="mailto:?subject=' . urlencode(get_the_permalink()) . '&body=Check out this article I came across '. get_the_permalink() .'"
+            title="Email this"
+            target="_new">
         			<svg class="icon icon--email">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
