@@ -24,12 +24,19 @@
         <footer class="posts-meta">
           <div class="widget widget--share">
 
-            <a class="js-social-share" href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title())); ?>'">
+
+            <div class="share">
+              <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title=<?php print(urlencode(the_title())); ?>" class="ico ico-fb">FaceBook Share</a>
+              <a href="http://twitter.com/home?status=<?php print(urlencode(the_title())); ?>+<?php print(urlencode(get_permalink())); ?>%20" class="ico ico-tw">Tweet</a>
+            </div>
+
+
+            <a class="js-social-share" href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title=<?php print(urlencode(the_title())); ?>">
               <svg class="icon icon--facebook">
         				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
         			</svg>
             </a>
-        		<a class="js-social-share" href="http://twitter.com/home?status=<?php print(urlencode(get_the_title())); ?>+<?php print(urlencode(get_permalink())); ?>">
+        		<a class="js-social-share" href="https://twitter.com/intent/tweet/?text=<?php bloginfo('title'); ?>&url=http%3A<?php the_permalink(); ?>">
               <svg class="icon icon--twitter">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
         		  </svg>
@@ -40,31 +47,6 @@
         		  </svg>
         		</a>
 
-        		<!-- <a class="js-social-share"
-              href="https://www.facebook.com/sharer/sharer.php?u=http%3A<?php the_permalink(); ?>%2F"
-              target="_new"
-              title="Share on Facebook">
-        			<svg class="icon icon--facebook">
-        				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
-        			</svg>
-            </a>
-
-            <a class="js-social-share"
-              href="https://twitter.com/intent/tweet/?text=<?php bloginfo('title'); ?>&url=http%3A<?php the_permalink(); ?>"
-              target="_new"
-              title="Share on Twitter">
-        			<svg class="icon icon--twitter">
-      			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
-        		  </svg>
-            </a>
-
-        		<a href="mailto:?subject=' . urlencode(get_the_permalink()) . '&body=Check out this article I came across '. get_the_permalink() .'"
-            title="Email this"
-            target="_new">
-        			<svg class="icon icon--email">
-      			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
-        		  </svg>
-            </a> -->
             <!-- https://www.addtoany.com/services/email_button -->
             <!-- <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script> -->
 
