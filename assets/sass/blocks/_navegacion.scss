@@ -150,6 +150,34 @@ input[name="off"] ~ .site-offset {
   }
 }
 
+// Paginacion entre posts/pages
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  .icon {
+    width: 50px;
+    height: 20px;
+  }
+  &__prev {}
+  &__next {}
+  a {
+    padding: $padding_base / 2;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    // min-width: 90%;
+    // display: block;
+    color: $color-alt;
+    &:hover {
+      // background-color: darken($color-base, 3);;
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
 // Nav Secondary
 .nav-secondary {
     ul {

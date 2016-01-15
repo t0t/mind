@@ -159,8 +159,6 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 
 
 
-
-
 /***************
  * Woo Theme support Declaration
  ***************/
