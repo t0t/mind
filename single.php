@@ -24,13 +24,6 @@
         <footer class="posts-meta">
           <div class="widget widget--share">
 
-
-            <div class="share">
-              <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title=<?php print(urlencode(the_title())); ?>" class="ico ico-fb">FaceBook Share</a>
-              <a href="http://twitter.com/home?status=<?php print(urlencode(the_title())); ?>+<?php print(urlencode(get_permalink())); ?>%20" class="ico ico-tw">Tweet</a>
-            </div>
-
-
             <a class="js-social-share" href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title=<?php print(urlencode(the_title())); ?>">
               <svg class="icon icon--facebook">
         				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
@@ -46,9 +39,6 @@
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
         		</a>
-
-            <!-- https://www.addtoany.com/services/email_button -->
-            <!-- <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script> -->
 
         	</div>
 
