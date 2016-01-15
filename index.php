@@ -37,16 +37,10 @@
 
       <?php endwhile; ?>
 
-  		<div class="navigation">
-  			<div class="nav-prev">
-  				<?php next_posts_link('&laquo; Older Entries') ?>
-  			</div>
-  			<div class="nav-next">
-  				<?php previous_posts_link('Newer Entries &raquo;') ?>
-  			</div>
-  		</div>
-
     </section>
+
+    <?php /* SLIDER */ get_template_part( 'partials/paginacion' ); ?>
+
   </main>
 
   <?php else : ?>
