@@ -24,17 +24,23 @@
         <footer class="posts-meta">
           <div class="widget widget--share">
 
-            <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title())); ?>'">
-              FB (test)
+            <a class="js-social-share" href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title())); ?>'">
+              <svg class="icon icon--facebook">
+        				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
+        			</svg>
             </a>
-        		<a href="http://twitter.com/home?status='. urlencode(get_the_title()). '+'. urlencode(get_the_permalink()) . '">
-        		  TW (test)
+        		<a class="js-social-share" href="http://twitter.com/home?status=<?php print(urlencode(get_the_title())); ?>+<?php print(urlencode(get_permalink())); ?>">
+              <svg class="icon icon--twitter">
+      			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
+        		  </svg>
         		</a>
-        		<a target="_new" href="mailto:?subject=' . urlencode(get_the_permalink()) . '&body=Check out this article I came across '. get_the_permalink() .'">
-        		  @ (test)
+        		<a class="js-social-share" target="_new" href="mailto:?subject=<?php print(urlencode(get_permalink())); ?>&body=Check out this article I came across <?php print(urlencode(get_permalink())); ?>">
+              <svg class="icon icon--email">
+      			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
+        		  </svg>
         		</a>
 
-        		<a class="js-social-share"
+        		<!-- <a class="js-social-share"
               href="https://www.facebook.com/sharer/sharer.php?u=http%3A<?php the_permalink(); ?>%2F"
               target="_new"
               title="Share on Facebook">
@@ -58,7 +64,7 @@
         			<svg class="icon icon--email">
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
-            </a>
+            </a> -->
             <!-- https://www.addtoany.com/services/email_button -->
             <!-- <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script> -->
 
