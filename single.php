@@ -24,11 +24,14 @@
         <footer class="posts-meta">
           <div class="widget widget--share">
 
-            <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title()))?>'">
-              FB
+            <a href="http://www.facebook.com/share.php?u=<?php print(urlencode(get_permalink())); ?>&title='<?php print(urlencode(get_the_title())); ?>'">
+              FB (test)
             </a>
         		<a href="http://twitter.com/home?status='. urlencode(get_the_title()). '+'. urlencode(get_the_permalink()) . '">
-        		  TW
+        		  TW (test)
+        		</a>
+        		<a target="_new" href="mailto:?subject=' . urlencode(get_the_permalink()) . '&body=Check out this article I came across '. get_the_permalink() .'">
+        		  @ (test)
         		</a>
 
         		<a class="js-social-share"
