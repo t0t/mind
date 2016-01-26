@@ -137,6 +137,9 @@
   figure {
     flex: 1 50%;
   }
+  figure:last-child {
+    margin-left: $padding_base / 2;
+  }
 }
 
 // Posts en Sidebar

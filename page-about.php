@@ -17,7 +17,7 @@ get_header(); ?>
   				<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#facebook"></use>
   			</svg> /holamind
       </a>
-  		<a href="mailto:flavio.casafibra@gmail.com">
+  		<a href="https://twitter.com/holamind" target="_blank">
   			<svg class="icon icon--twitter">
 			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#twitter"></use>
   		  </svg> @holamind

@@ -39,7 +39,8 @@
       			    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#email"></use>
         		  </svg>
         		</a>
-
+            <!-- Tumblr
+            http://www.tumblr.com/share?v=3&u=[URL]&t=[TITLE] -->
         	</div>
 
           <?php //the_tags('Tags: ') ?>

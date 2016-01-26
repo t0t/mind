@@ -10,32 +10,31 @@
   <?php
     $args = array(
       'post_type' => 'post',
+      'meta_key'  => 'is_slide',
+      'meta_value'  => true,
       'showposts' => 5
     );
     $the_query = new WP_Query( $args );
   ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
-    <div class="slider__slides">
-      <div class="inner">
-      	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-          <figure class="slider__slides__slide">
-
-            <?php if( get_field('img_slider') ): ?>
-              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                <?php
-                  $image = get_field('img_slider');
-                  $size = 'large'; // (thumbnail, medium, large, full or custom size)
-                  if( $image ) { echo wp_get_attachment_image( $image, $size ); }
-                ?>
-              </a>
-            <?php endif; ?>
-
-          </figure>
-      	<?php endwhile; ?>
+      <div class="slider__slides">
+        <div class="inner">
+        	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <figure class="slider__slides__slide">
+              <?php if( get_field('img_slider') ): ?>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                  <?php
+                    $image = get_field('img_slider');
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                    if( $image ) { echo wp_get_attachment_image( $image, $size ); }
+                  ?>
+                </a>
+              <?php endif; ?>
+            </figure>
+        	<?php endwhile; ?>
+        </div>
       </div>
-    </div>
   	<?php /* Restore original Post Data */ wp_reset_postdata(); ?>
   <?php else : ?>
   	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
