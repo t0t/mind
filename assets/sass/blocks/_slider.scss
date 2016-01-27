@@ -2,41 +2,50 @@
   input { display: none }
   max-width: 100%;
   margin-bottom: $padding_base;
+  position: relative;
   // -webkit-transform: translateZ(0);
   transition: all 0.5s ease-out;
   .slider__slides {
     overflow: hidden;
-    width: 1024px;
+    max-width: 1024px;
+    height: auto;
+    @media screen and (min-width: 1240px) {
+      max-height: $heigth-slider;
+    }
     .inner {
+      display: flex;
       width: 500%;
+      height: inherit;
       line-height: 0;
       overflow: inherit;
     }
-    figure {
-      width: 1024px;
-      height: 576px;
-      float: left;
-      @media screen and (min-width: 1240px) {
-        // width: 11.20%;
-        img {
-          // max-width: 800px;
-        }
-      }
+    &__slide {
+      img {}
+      @media screen and (min-width: 1240px) {}
     }
   }
 }
 
 // Slider Nav
 .slider__nav {
-  margin-top: -30%;
-  width: 110%;
+  width: 75px;
+  position: absolute;
+  top: 38%;
+  right: 0;
+  @media screen and (min-width: 1240px) {
+    top: 45%;
+    right: -$padding_base * 2;
+  }
   label {
     display: none;
     width: 80px;
     height: 80px;
     opacity: 0.5;
     transition: opacity 0.2s ease-out;
-    &:hover { opacity: 0.8 }
+    &:hover {
+      opacity: 0.8;
+      cursor: crosshair;
+    }
   }
 }
 // Right Button
@@ -45,7 +54,6 @@
 #slide3:checked ~ .slider__nav label:nth-child(4),
 #slide4:checked ~ .slider__nav label:nth-child(5),
 #slide5:checked ~ .slider__nav label:nth-child(1) {
-  // background: url('/next.png') no-repeat;
   float: right;
   margin-right: 0;
   display: block;
@@ -56,7 +64,6 @@
 #slide3:checked ~ .slider__nav label:nth-child(2),
 #slide4:checked ~ .slider__nav label:nth-child(3),
 #slide5:checked ~ .slider__nav label:nth-child(4) {
-  // background: url('/previous.png') no-repeat;
   float: left;
   margin-left: 0;
   display: none;
@@ -64,9 +71,8 @@
 
 // Selected Dots
 .slider__dots {
-  position: relative;
   z-index: 5;
-  margin-top: 32%;
+  margin-top: $padding_base / 2;
   text-align: center;
   label {
     border-radius: 10px;
@@ -86,26 +92,11 @@
 }
 
 // Slides
-  #slide1:checked ~ .slider__slides .inner { margin-left: 0 }
-  #slide2:checked ~ .slider__slides .inner { margin-left: -75% }
-  #slide3:checked ~ .slider__slides .inner { margin-left: -160% }
-  #slide4:checked ~ .slider__slides .inner { margin-left: -240% }
-  #slide5:checked ~ .slider__slides .inner { margin-left: -317% }
-
-  // Slides 1024px and up
-  @media screen and (min-width: 1240px) {
-    #slide1:checked ~ .slider__slides .inner { margin-left: 0 }
-    #slide2:checked ~ .slider__slides .inner { margin-left: -100% }
-    #slide3:checked ~ .slider__slides .inner { margin-left: -200% }
-    #slide4:checked ~ .slider__slides .inner { margin-left: -300% }
-    #slide5:checked ~ .slider__slides .inner { margin-left: -400% }
-  }
-
-// #slide1:checked ~ .slider__slides .inner { margin-left: 0 }
-// #slide2:checked ~ .slider__slides .inner { margin-left: -100% }
-// #slide3:checked ~ .slider__slides .inner { margin-left: -200% }
-// #slide4:checked ~ .slider__slides .inner { margin-left: -300% }
-// #slide5:checked ~ .slider__slides .inner { margin-left: -400% }
+#slide1:checked ~ .slider__slides .inner { margin-left: 0 }
+#slide2:checked ~ .slider__slides .inner { margin-left: -100% }
+#slide3:checked ~ .slider__slides .inner { margin-left: -200% }
+#slide4:checked ~ .slider__slides .inner { margin-left: -300% }
+#slide5:checked ~ .slider__slides .inner { margin-left: -400% }
 
 .slider__slides {
   position: relative;
