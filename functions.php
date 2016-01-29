@@ -26,6 +26,7 @@ define( 'SCRIPTS', THEMEROOT . '/assets/js' );
  // add_action('init', 'create_post_type');
 
 
+
  /**
   * ----------------------------------------------------------------------------------------
   *  - Include the native WP Custom Fields
@@ -155,6 +156,7 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 		wp_enqueue_style( 'alpha-master', THEMEROOT . '/style.css', false );
 	}
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
+
 
 
 

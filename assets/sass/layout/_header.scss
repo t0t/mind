@@ -1,6 +1,6 @@
 header {}
 .site-header {
-  width: 97%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -14,7 +14,7 @@ header {}
     flex-direction: column;
     justify-content: center;
     padding-top: $padding_base / 2;
-    padding-bottom: $padding_base / 2;
+    // padding-bottom: $padding_base / 2;
     flex-direction: row;
   }
 }

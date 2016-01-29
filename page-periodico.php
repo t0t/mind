@@ -11,29 +11,12 @@ get_header(); ?>
 <main class="site-main" role="main">
 
   <?php
-    // $page = get_query_var( 'page', 1 );
     $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-    // if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-    // elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-    // else { $paged = 1; }
-    //$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-    // $paged = ( get_query_var('page')) ? get_query_var('page') : 1;
-    // the arguments
     $args = array(
       'post_type' => 'post',
-      // 'category__in' => array( 3 ),
-      // 'order' => 'DESC',
       'posts_per_page' => 8,
       'paged' => $paged
-      // 'paged' => $paged
-      // 'showposts' => 5
     );
-  //   $the_query = new WP_Query( array(
-  //     'posts_per_page' => 3,
-  //     'paged' => $paged
-  //  ) );
-  //  $the_query = new WP_Query('posts_per_page=3&page=' . '$paged');
-   //echo (int) $paged;
     $the_query = new WP_Query($args);
   ?>
   <?php if ( $the_query->have_posts() ) : ?>
@@ -77,16 +60,12 @@ get_header(); ?>
     <?php previous_posts_link(); ?> -->
   	<?php /* Restore original Post Data */ wp_reset_postdata(); ?>
 
-
   <?php else : ?>
     <main class="site-main" role="main">
       <h2>There were no results that matched your request</h2>
       <?php get_search_form(); ?>
     </main>
   <?php endif; ?>
-
-
-
 
 
 </main>

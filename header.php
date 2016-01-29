@@ -35,8 +35,9 @@
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo6">
           <?php elseif (is_page('about')): ?>
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo4">
+          <?php else: ?>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo">
           <?php endif; ?>
-	        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#logo">
   		  </svg>
 			</a>
 			<!-- <h1 class="brand__name"><?php //bloginfo('name');?></h1> -->
