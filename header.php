@@ -17,6 +17,23 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '836110186535147',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <header class="site-header" role="banner">
 
@@ -47,7 +64,7 @@
     <div class="search-form">
       <form method="get" action="<?php echo home_url('/'); ?>">
   			<div class="search-form__fieldset">
-  				<input type="text" name="s" maxlength="30" autocomplete="off" value="">
+  				<input type="text" name="s" id="s" maxlength="20" value="">
   				<button type="submit" class="btn--search">
             <svg class="icon icon--lupa">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#lupa">
@@ -56,7 +73,6 @@
   			</div>
   		</form>
     </div>
-
     <div class="site-offset">
       <nav class="site-offset__nav" role="navigation">
 

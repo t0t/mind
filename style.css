@@ -987,8 +987,7 @@ body:not(.home).page > footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: center;
-  color: white; }
+  align-items: center; }
   .site-header a {
     color: #f7eed4; }
   .site-header label {
@@ -1001,6 +1000,11 @@ body:not(.home).page > footer {
       justify-content: center;
       padding-top: 25px;
       flex-direction: row; } }
+
+.site-title {
+  color: rgba(0, 0, 0, 0.3); }
+  .site-title span {
+    color: #1c3f94; }
 
 .main-footer {
   flex-basis: 100%;

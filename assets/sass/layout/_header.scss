@@ -1,13 +1,14 @@
 header {}
+
 .site-header {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  color: $color-white;
   a { color: $color-base; }
   label { margin-right: 0; }
+
   @media screen and (min-width: $bp2_3) {
     position: relative;
     flex: 1 100%;
@@ -16,5 +17,12 @@ header {}
     padding-top: $padding_base / 2;
     // padding-bottom: $padding_base / 2;
     flex-direction: row;
+  }
+}
+
+.site-title {
+  color: $color-black-suave;
+  span {
+    color: $color-alt;
   }
 }
