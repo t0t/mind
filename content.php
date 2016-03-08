@@ -6,6 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
+	
 	<div class="entry__content">
     <?php /* Bloques */ if (have_rows('layouts')): ?>
     	<?php while (have_rows('layouts')): the_row(); ?>
@@ -13,6 +14,7 @@
     		<?php /* Layout tipo 1 */ if (get_row_layout() == 'layout1'): ?>
       		<?php if (have_rows('div')): ?>
         		<?php while (have_rows('div')): the_row(); ?>
+
         		<div class="main-post__content">
           		<?php if /* Main post content */ (get_sub_field("content")): ?>
             		<article class="main-post__content__entry" role="article">
@@ -64,24 +66,6 @@
     /* /bloques */
     endif; ?>
 
-
-    <?php
-			// if ( is_search() ) {
-			// 	the_excerpt();
-			// } else {
-			// 	the_content( __( 'Continue reading &rarr;', 'alpha' ) );
-			// 	wp_link_pages();
-			// }
-		?>
 	</div>
 
-	<footer class="entry__footer">
-		<?php
-			// If we have a single page and the author bio exists, display it
-			if ( is_single() && get_the_author_meta( 'description' ) ) {
-				echo '<h2>' . __( 'Written by ', 'alpha' ) . get_the_author() . '</h2>';
-				echo '<p>' . the_author_meta( 'description' ) . '</p>';
-			}
-		?>
-	</footer>
 </article>

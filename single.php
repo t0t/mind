@@ -17,7 +17,7 @@
       <!-- <h1 class="site-main__title">Cosas</h1> -->
     <?php //endif; ?>
 
-      <?php while( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <?php get_template_part( 'content', get_post_format() ); ?>
 
@@ -51,7 +51,9 @@
           </div> -->
         </footer>
 
-      <?php endwhile; ?>
+      <?php endwhile; else : ?>
+      	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
 
   </main>
 
